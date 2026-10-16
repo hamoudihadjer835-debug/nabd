@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'core/localization/locale_controller.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
+import 'l10n/app_localizations.dart';
 
 void main() {
   runApp(const NabdApp());
@@ -14,20 +15,20 @@ class NabdApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'Nabd',
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.light,
-
-      locale: const Locale('ar'),
-      supportedLocales: const [Locale('ar'), Locale('fr'), Locale('en')],
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-
-      routerConfig: appRouter, // بدل home: التنقل يتحكم فيه الراوتر
+    // نسمعو لتغير اللغة: كي تتبدل، يعاد رسم التطبيق باللغة الجديدة
+    return ValueListenableBuilder<Locale>(
+      valueListenable: appLocale,
+      builder: (context, locale, _) {
+        return MaterialApp.router(
+          title: 'Nabd',
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.light,
+          locale: locale,
+          supportedLocales: AppLocalizations.supportedLocales,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          routerConfig: appRouter,
+        );
+      },
     );
   }
 }
