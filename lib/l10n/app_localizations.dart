@@ -309,6 +309,120 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Enter the 6-digit code'**
   String get codeIncomplete;
+
+  /// No description provided for @resetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Create new password'**
+  String get resetTitle;
+
+  /// No description provided for @resetSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a new password with at least 6 characters'**
+  String get resetSubtitle;
+
+  /// No description provided for @newPasswordLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'New password'**
+  String get newPasswordLabel;
+
+  /// No description provided for @confirmPasswordLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm password'**
+  String get confirmPasswordLabel;
+
+  /// No description provided for @confirmPasswordHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Re-enter your password'**
+  String get confirmPasswordHint;
+
+  /// No description provided for @resetButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset password'**
+  String get resetButton;
+
+  /// No description provided for @passwordsDontMatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Passwords do not match'**
+  String get passwordsDontMatch;
+
+  /// No description provided for @tabHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get tabHome;
+
+  /// No description provided for @tabCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'Categories'**
+  String get tabCategories;
+
+  /// No description provided for @tabCart.
+  ///
+  /// In en, this message translates to:
+  /// **'Cart'**
+  String get tabCart;
+
+  /// No description provided for @tabOrders.
+  ///
+  /// In en, this message translates to:
+  /// **'Orders'**
+  String get tabOrders;
+
+  /// No description provided for @tabProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get tabProfile;
+
+  /// No description provided for @comingSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Coming soon'**
+  String get comingSoon;
+
+  /// No description provided for @statusAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'In stock'**
+  String get statusAvailable;
+
+  /// No description provided for @statusLimited.
+  ///
+  /// In en, this message translates to:
+  /// **'Limited quantity'**
+  String get statusLimited;
+
+  /// No description provided for @statusOutOfStock.
+  ///
+  /// In en, this message translates to:
+  /// **'Out of stock'**
+  String get statusOutOfStock;
+
+  /// No description provided for @currency.
+  ///
+  /// In en, this message translates to:
+  /// **'DA'**
+  String get currency;
+
+  /// No description provided for @featuredProducts.
+  ///
+  /// In en, this message translates to:
+  /// **'Featured products'**
+  String get featuredProducts;
+
+  /// No description provided for @viewAll.
+  ///
+  /// In en, this message translates to:
+  /// **'View all'**
+  String get viewAll;
 }
 
 class _AppLocalizationsDelegate

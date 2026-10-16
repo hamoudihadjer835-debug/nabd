@@ -43,18 +43,14 @@ class _LoginScreenState extends State<LoginScreen> {
     return null;
   }
 
-  void _submit() {
+    void _submit() {
     FocusScope.of(context).unfocus(); // نسكرو الكيبورد
     if (_formKey.currentState!.validate()) {
-      // مؤقت: الدخول الحقيقي نربطوه مع الـ Backend في المرحلة 6
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Valid ✓ — real login comes with the backend (Phase 6)'),
-        ),
-      );
+      // مؤقت: الدخول الحقيقي مع الـ Backend (المرحلة 6)،
+      // دابا ننتقلو للتطبيق الرئيسي باش نجربو الشريط السفلي
+      context.go(AppRoutes.home);
     }
   }
-
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;

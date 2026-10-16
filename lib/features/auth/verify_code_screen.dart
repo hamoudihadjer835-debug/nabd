@@ -83,18 +83,14 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
     );
   }
 
-  void _confirm() {
+    void _confirm() {
     FocusScope.of(context).unfocus();
     if (_codeController.text.length < _codeLength) {
       setState(() => _showError = true);
       return;
     }
-    // مؤقت: التحقق الحقيقي مع الـ Backend (المرحلة 6)
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Valid ✓ — verifying the code comes with the backend (Phase 6)'),
-      ),
-    );
+    // مؤقت: التحقق الحقيقي من الرمز مع الـ Backend (المرحلة 6)
+    context.push(AppRoutes.resetPassword);
   }
 
   void _changeNumber() {

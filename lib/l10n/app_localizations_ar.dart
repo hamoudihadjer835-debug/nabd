@@ -114,4 +114,61 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get codeIncomplete => 'أدخل الرمز المكوّن من 6 أرقام';
+
+  @override
+  String get resetTitle => 'إنشاء كلمة سر جديدة';
+
+  @override
+  String get resetSubtitle => 'اختر كلمة سر جديدة من 6 أحرف على الأقل';
+
+  @override
+  String get newPasswordLabel => 'كلمة السر الجديدة';
+
+  @override
+  String get confirmPasswordLabel => 'تأكيد كلمة السر';
+
+  @override
+  String get confirmPasswordHint => 'أعد إدخال كلمة السر';
+
+  @override
+  String get resetButton => 'إعادة تعيين كلمة السر';
+
+  @override
+  String get passwordsDontMatch => 'كلمتا السر غير متطابقتين';
+
+  @override
+  String get tabHome => 'الرئيسية';
+
+  @override
+  String get tabCategories => 'الأقسام';
+
+  @override
+  String get tabCart => 'السلة';
+
+  @override
+  String get tabOrders => 'الطلبات';
+
+  @override
+  String get tabProfile => 'حسابي';
+
+  @override
+  String get comingSoon => 'قريبًا';
+
+  @override
+  String get statusAvailable => 'متوفر';
+
+  @override
+  String get statusLimited => 'كمية محدودة';
+
+  @override
+  String get statusOutOfStock => 'نفد المخزون';
+
+  @override
+  String get currency => 'دج';
+
+  @override
+  String get featuredProducts => 'منتجات مميزة';
+
+  @override
+  String get viewAll => 'عرض الكل';
 }

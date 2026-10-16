@@ -115,4 +115,62 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get codeIncomplete => 'Enter the 6-digit code';
+
+  @override
+  String get resetTitle => 'Create new password';
+
+  @override
+  String get resetSubtitle =>
+      'Choose a new password with at least 6 characters';
+
+  @override
+  String get newPasswordLabel => 'New password';
+
+  @override
+  String get confirmPasswordLabel => 'Confirm password';
+
+  @override
+  String get confirmPasswordHint => 'Re-enter your password';
+
+  @override
+  String get resetButton => 'Reset password';
+
+  @override
+  String get passwordsDontMatch => 'Passwords do not match';
+
+  @override
+  String get tabHome => 'Home';
+
+  @override
+  String get tabCategories => 'Categories';
+
+  @override
+  String get tabCart => 'Cart';
+
+  @override
+  String get tabOrders => 'Orders';
+
+  @override
+  String get tabProfile => 'Profile';
+
+  @override
+  String get comingSoon => 'Coming soon';
+
+  @override
+  String get statusAvailable => 'In stock';
+
+  @override
+  String get statusLimited => 'Limited quantity';
+
+  @override
+  String get statusOutOfStock => 'Out of stock';
+
+  @override
+  String get currency => 'DA';
+
+  @override
+  String get featuredProducts => 'Featured products';
+
+  @override
+  String get viewAll => 'View all';
 }

@@ -119,4 +119,62 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get codeIncomplete => 'Saisissez le code à 6 chiffres';
+
+  @override
+  String get resetTitle => 'Créer un nouveau mot de passe';
+
+  @override
+  String get resetSubtitle =>
+      'Choisissez un nouveau mot de passe d’au moins 6 caractères';
+
+  @override
+  String get newPasswordLabel => 'Nouveau mot de passe';
+
+  @override
+  String get confirmPasswordLabel => 'Confirmer le mot de passe';
+
+  @override
+  String get confirmPasswordHint => 'Saisissez à nouveau le mot de passe';
+
+  @override
+  String get resetButton => 'Réinitialiser le mot de passe';
+
+  @override
+  String get passwordsDontMatch => 'Les mots de passe ne correspondent pas';
+
+  @override
+  String get tabHome => 'Accueil';
+
+  @override
+  String get tabCategories => 'Catégories';
+
+  @override
+  String get tabCart => 'Panier';
+
+  @override
+  String get tabOrders => 'Commandes';
+
+  @override
+  String get tabProfile => 'Profil';
+
+  @override
+  String get comingSoon => 'Bientôt disponible';
+
+  @override
+  String get statusAvailable => 'En stock';
+
+  @override
+  String get statusLimited => 'Quantité limitée';
+
+  @override
+  String get statusOutOfStock => 'Rupture de stock';
+
+  @override
+  String get currency => 'DA';
+
+  @override
+  String get featuredProducts => 'Produits en vedette';
+
+  @override
+  String get viewAll => 'Voir tout';
 }
