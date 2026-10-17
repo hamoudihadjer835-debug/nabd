@@ -226,4 +226,39 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get noProductsInCategory =>
       'Aucun produit dans cette catégorie pour le moment';
+
+  @override
+  String stockLeft(int count) {
+    return '$count pièces restantes';
+  }
+
+  @override
+  String get specsTitle => 'Caractéristiques';
+
+  @override
+  String get specsSubtitle => 'Informations fournies par le fabricant';
+
+  @override
+  String get specManufacturer => 'Fabricant';
+
+  @override
+  String get specIntendedUse => 'Usage prévu';
+
+  @override
+  String get specCertifications => 'Certifications';
+
+  @override
+  String get specSku => 'Référence produit';
+
+  @override
+  String get notSpecified => 'Non précisé';
+
+  @override
+  String get addToCart => 'Ajouter au panier';
+
+  @override
+  String get addedToCart => 'Ajouté au panier';
+
+  @override
+  String get productNotFound => 'Produit introuvable';
 }

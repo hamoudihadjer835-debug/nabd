@@ -220,4 +220,39 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get noProductsInCategory => 'No products in this category yet';
+
+  @override
+  String stockLeft(int count) {
+    return '$count left';
+  }
+
+  @override
+  String get specsTitle => 'Specifications';
+
+  @override
+  String get specsSubtitle => 'Information provided by the manufacturer';
+
+  @override
+  String get specManufacturer => 'Manufacturer';
+
+  @override
+  String get specIntendedUse => 'Intended use';
+
+  @override
+  String get specCertifications => 'Certifications';
+
+  @override
+  String get specSku => 'Product number';
+
+  @override
+  String get notSpecified => 'Not specified';
+
+  @override
+  String get addToCart => 'Add to cart';
+
+  @override
+  String get addedToCart => 'Added to cart';
+
+  @override
+  String get productNotFound => 'Product not found';
 }

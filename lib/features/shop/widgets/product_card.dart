@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
 import '../../../core/localization/l10n_extension.dart';
+import '../../../core/router/app_routes.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_dimens.dart';
 import '../models/product.dart';
+import 'status_badge.dart';
 
 /// بطاقة منتج: شارة الحالة، قلب، صورة، اسم، سعر، وزر إضافة.
+/// الضغط على البطاقة يفتح صفحة تفاصيل المنتج.
 class ProductCard extends StatelessWidget {
   const ProductCard({
     super.key,
     required this.product,
-    this.onTap,
     this.onAdd,
   });
 
   final Product product;
-  final VoidCallback? onTap; // فتح تفاصيل المنتج (نربطوها لاحقا)
   final VoidCallback? onAdd; // إضافة للسلة (نربطوها لاحقا)
 
   @override
@@ -45,7 +47,7 @@ class ProductCard extends StatelessWidget {
         type: MaterialType.transparency,
         child: InkWell(
           borderRadius: AppRadius.cardBorder,
-          onTap: onTap,
+          onTap: () => context.push(AppRoutes.product(product.id)),
           child: Padding(
             padding: const EdgeInsets.all(12),
             child: Column(
@@ -54,7 +56,7 @@ class ProductCard extends StatelessWidget {
                 // الصف العلوي: شارة الحالة + قلب
                 Row(
                   children: [
-                    _StatusBadge(status: product.status),
+                    StatusBadge(status: product.status),
                     const Spacer(),
                     const Icon(
                       Icons.favorite_border_rounded,
@@ -112,47 +114,6 @@ class ProductCard extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-/// شارة الحالة: خلفية بلون الحالة (خفيف) ونص غامق باش يبقى مقروء.
-class _StatusBadge extends StatelessWidget {
-  const _StatusBadge({required this.status});
-
-  final ProductStatus status;
-
-  @override
-  Widget build(BuildContext context) {
-    final l10n = context.l10n;
-
-    final String label;
-    final Color color;
-    switch (status) {
-      case ProductStatus.available:
-        label = l10n.statusAvailable;
-        color = AppColors.accentMint;
-      case ProductStatus.limited:
-        label = l10n.statusLimited;
-        color = AppColors.warning;
-      case ProductStatus.outOfStock:
-        label = l10n.statusOutOfStock;
-        color = AppColors.error;
-    }
-
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-      decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.2),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Text(
-        label,
-        style: Theme.of(context)
-            .textTheme
-            .labelSmall
-            ?.copyWith(color: AppColors.text),
       ),
     );
   }

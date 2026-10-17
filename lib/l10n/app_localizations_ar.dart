@@ -218,4 +218,39 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get noProductsInCategory => 'لا توجد منتجات في هذا القسم بعد';
+
+  @override
+  String stockLeft(int count) {
+    return 'متبقي $count قطعة';
+  }
+
+  @override
+  String get specsTitle => 'المواصفات';
+
+  @override
+  String get specsSubtitle => 'معلومات مقدّمة من الشركة المصنّعة';
+
+  @override
+  String get specManufacturer => 'الشركة المصنّعة';
+
+  @override
+  String get specIntendedUse => 'الاستعمال المقصود';
+
+  @override
+  String get specCertifications => 'الشهادات';
+
+  @override
+  String get specSku => 'رقم المنتج';
+
+  @override
+  String get notSpecified => 'غير محدد';
+
+  @override
+  String get addToCart => 'أضف إلى السلة';
+
+  @override
+  String get addedToCart => 'تمت الإضافة إلى السلة';
+
+  @override
+  String get productNotFound => 'المنتج غير موجود';
 }

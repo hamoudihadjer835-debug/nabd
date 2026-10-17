@@ -11,6 +11,11 @@ class Product {
     required this.name,
     required this.price,
     required this.status,
+    required this.sku,
+    required this.stockQuantity,
+    this.manufacturer,
+    this.intendedUse,
+    this.certification,
     this.imageAsset,
   });
 
@@ -19,6 +24,14 @@ class Product {
   final LocalizedText name;
   final int price; // بالدينار الجزائري (DA)
   final ProductStatus status;
+
+  final String sku; // رقم المنتج
+  final int stockQuantity; // الكمية المتبقية
+
+  // معلومات يمكن التحقق منها (null = غير محدد):
+  final String? manufacturer; // اسم الشركة المصنّعة
+  final LocalizedText? intendedUse; // الاستعمال المقصود
+  final String? certification; // رقم الشهادة
 
   /// مسار صورة المنتج (null دابا → نعرضو أيقونة مكان الصورة).
   final String? imageAsset;

@@ -513,6 +513,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No products in this category yet'**
   String get noProductsInCategory;
+
+  /// No description provided for @stockLeft.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} left'**
+  String stockLeft(int count);
+
+  /// No description provided for @specsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Specifications'**
+  String get specsTitle;
+
+  /// No description provided for @specsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Information provided by the manufacturer'**
+  String get specsSubtitle;
+
+  /// No description provided for @specManufacturer.
+  ///
+  /// In en, this message translates to:
+  /// **'Manufacturer'**
+  String get specManufacturer;
+
+  /// No description provided for @specIntendedUse.
+  ///
+  /// In en, this message translates to:
+  /// **'Intended use'**
+  String get specIntendedUse;
+
+  /// No description provided for @specCertifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Certifications'**
+  String get specCertifications;
+
+  /// No description provided for @specSku.
+  ///
+  /// In en, this message translates to:
+  /// **'Product number'**
+  String get specSku;
+
+  /// No description provided for @notSpecified.
+  ///
+  /// In en, this message translates to:
+  /// **'Not specified'**
+  String get notSpecified;
+
+  /// No description provided for @addToCart.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to cart'**
+  String get addToCart;
+
+  /// No description provided for @addedToCart.
+  ///
+  /// In en, this message translates to:
+  /// **'Added to cart'**
+  String get addedToCart;
+
+  /// No description provided for @productNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Product not found'**
+  String get productNotFound;
 }
 
 class _AppLocalizationsDelegate

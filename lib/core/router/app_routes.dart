@@ -2,7 +2,7 @@
 class AppRoutes {
   AppRoutes._();
 
-  // الحساب
+  // شاشات الحساب
   static const String splash = '/';
   static const String onboarding = '/onboarding';
   static const String login = '/login';
@@ -17,7 +17,14 @@ class AppRoutes {
   static const String cart = '/cart';
   static const String orders = '/orders';
   static const String profile = '/profile';
-    /// عنوان منتجات قسم معين، مثلا: /categories/c1
+
+  /// عنوان منتجات قسم معين، مثلا: /categories/c1
   static String categoryProducts(String categoryId) =>
       '$categories/$categoryId';
+
+  /// نمط مسار تفاصيل المنتج (يستعمل في الراوتر).
+  static const String productDetailsPattern = '/product/:productId';
+
+  /// عنوان تفاصيل منتج معين، مثلا: /product/p1
+  static String product(String productId) => '/product/$productId';
 }

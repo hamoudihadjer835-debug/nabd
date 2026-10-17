@@ -68,6 +68,16 @@
   "sortDefault": "Par défaut",
   "sortPriceLow": "Prix : croissant",
   "sortPriceHigh": "Prix : décroissant",
-  "noProductsInCategory": "Aucun produit dans cette catégorie pour le moment"
-
+  "noProductsInCategory": "Aucun produit dans cette catégorie pour le moment",
+  "stockLeft": "{count} pièces restantes",
+  "specsTitle": "Caractéristiques",
+  "specsSubtitle": "Informations fournies par le fabricant",
+  "specManufacturer": "Fabricant",
+  "specIntendedUse": "Usage prévu",
+  "specCertifications": "Certifications",
+  "specSku": "Référence produit",
+  "notSpecified": "Non précisé",
+  "addToCart": "Ajouter au panier",
+  "addedToCart": "Ajouté au panier",
+  "productNotFound": "Produit introuvable"
 }

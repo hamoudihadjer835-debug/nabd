@@ -75,5 +75,24 @@
   "sortDefault": "Default",
   "sortPriceLow": "Price: low to high",
   "sortPriceHigh": "Price: high to low",
-  "noProductsInCategory": "No products in this category yet"
+  "noProductsInCategory": "No products in this category yet",
+  "stockLeft": "{count} left",
+  "@stockLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "specsTitle": "Specifications",
+  "specsSubtitle": "Information provided by the manufacturer",
+  "specManufacturer": "Manufacturer",
+  "specIntendedUse": "Intended use",
+  "specCertifications": "Certifications",
+  "specSku": "Product number",
+  "notSpecified": "Not specified",
+  "addToCart": "Add to cart",
+  "addedToCart": "Added to cart",
+  "productNotFound": "Product not found"
+
 }

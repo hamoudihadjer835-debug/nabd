@@ -15,6 +15,7 @@ import 'app_routes.dart';
 import '../../features/shop/home_screen.dart';
 import '../../features/shop/categories_screen.dart';
 import '../../features/shop/category_products_screen.dart';
+import '../../features/shop/product_details_screen.dart';
 
 /// جدول التنقل: كل عنوان مربوط بشاشة.
 final GoRouter appRouter = GoRouter(
@@ -51,7 +52,13 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.resetPassword,
       builder: (context, state) => const ResetPasswordScreen(),
     ),
-
+         // ---------- تفاصيل المنتج: ملء الشاشة، بلا الشريط السفلي ----------
+    GoRoute(
+      path: AppRoutes.productDetailsPattern,
+      builder: (context, state) => ProductDetailsScreen(
+        productId: state.pathParameters['productId'] ?? '',
+      ),
+    ),
     // ---------- التطبيق الرئيسي: 5 تبويبات ----------
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) =>

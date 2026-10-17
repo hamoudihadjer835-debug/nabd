@@ -68,5 +68,16 @@
   "sortDefault": "الافتراضي",
   "sortPriceLow": "السعر: من الأقل إلى الأعلى",
   "sortPriceHigh": "السعر: من الأعلى إلى الأقل",
-  "noProductsInCategory": "لا توجد منتجات في هذا القسم بعد"
+  "noProductsInCategory": "لا توجد منتجات في هذا القسم بعد",
+  "stockLeft": "متبقي {count} قطعة",
+  "specsTitle": "المواصفات",
+  "specsSubtitle": "معلومات مقدّمة من الشركة المصنّعة",
+  "specManufacturer": "الشركة المصنّعة",
+  "specIntendedUse": "الاستعمال المقصود",
+  "specCertifications": "الشهادات",
+  "specSku": "رقم المنتج",
+  "notSpecified": "غير محدد",
+  "addToCart": "أضف إلى السلة",
+  "addedToCart": "تمت الإضافة إلى السلة",
+  "productNotFound": "المنتج غير موجود"
 }
