@@ -255,4 +255,40 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get productNotFound => 'Product not found';
+
+  @override
+  String get recentSearches => 'Recent searches';
+
+  @override
+  String get clearAll => 'Clear all';
+
+  @override
+  String get mostSearched => 'Most searched';
+
+  @override
+  String get filterPrice => 'Price';
+
+  @override
+  String get filterAvailability => 'Availability';
+
+  @override
+  String get filterCategory => 'Category';
+
+  @override
+  String get noResults => 'No results found';
+
+  @override
+  String get noResultsHint => 'Try different keywords';
+
+  @override
+  String resultsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count results',
+      one: '1 result',
+      zero: 'No results',
+    );
+    return '$_temp0';
+  }
 }

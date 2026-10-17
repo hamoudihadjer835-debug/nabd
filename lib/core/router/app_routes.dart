@@ -18,6 +18,9 @@ class AppRoutes {
   static const String orders = '/orders';
   static const String profile = '/profile';
 
+  /// شاشة البحث: مسار فرعي داخل تبويب الرئيسية.
+  static const String search = '/home/search';
+
   /// عنوان منتجات قسم معين، مثلا: /categories/c1
   static String categoryProducts(String categoryId) =>
       '$categories/$categoryId';

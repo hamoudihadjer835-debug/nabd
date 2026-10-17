@@ -253,4 +253,43 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get productNotFound => 'المنتج غير موجود';
+
+  @override
+  String get recentSearches => 'آخر عمليات البحث';
+
+  @override
+  String get clearAll => 'مسح الكل';
+
+  @override
+  String get mostSearched => 'الأكثر بحثًا';
+
+  @override
+  String get filterPrice => 'السعر';
+
+  @override
+  String get filterAvailability => 'التوفر';
+
+  @override
+  String get filterCategory => 'القسم';
+
+  @override
+  String get noResults => 'لا توجد نتائج';
+
+  @override
+  String get noResultsHint => 'جرّب كلمات بحث أخرى';
+
+  @override
+  String resultsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count نتيجة',
+      many: '$count نتيجة',
+      few: '$count نتائج',
+      two: 'نتيجتان',
+      one: 'نتيجة واحدة',
+      zero: 'لا توجد نتائج',
+    );
+    return '$_temp0';
+  }
 }

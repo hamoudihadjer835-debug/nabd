@@ -7,15 +7,16 @@ import '../../features/auth/reset_password_screen.dart';
 import '../../features/auth/sign_up_screen.dart';
 import '../../features/auth/verify_code_screen.dart';
 import '../../features/onboarding/onboarding_screen.dart';
+import '../../features/shop/categories_screen.dart';
+import '../../features/shop/category_products_screen.dart';
+import '../../features/shop/home_screen.dart';
+import '../../features/shop/product_details_screen.dart';
+import '../../features/shop/search_screen.dart';
 import '../../features/splash/splash_screen.dart';
 import '../localization/l10n_extension.dart';
 import '../widgets/coming_soon_screen.dart';
 import '../widgets/main_shell.dart';
 import 'app_routes.dart';
-import '../../features/shop/home_screen.dart';
-import '../../features/shop/categories_screen.dart';
-import '../../features/shop/category_products_screen.dart';
-import '../../features/shop/product_details_screen.dart';
 
 /// جدول التنقل: كل عنوان مربوط بشاشة.
 final GoRouter appRouter = GoRouter(
@@ -52,14 +53,16 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.resetPassword,
       builder: (context, state) => const ResetPasswordScreen(),
     ),
-         // ---------- تفاصيل المنتج: ملء الشاشة، بلا الشريط السفلي ----------
+
+    // ---------- تفاصيل المنتج: ملء الشاشة، بلا الشريط السفلي ----------
     GoRoute(
       path: AppRoutes.productDetailsPattern,
       builder: (context, state) => ProductDetailsScreen(
         productId: state.pathParameters['productId'] ?? '',
       ),
     ),
-    // ---------- التطبيق الرئيسي: 5 تبويبات ----------
+
+    // ---------- التطبيق الرئيسي: 4 تبويبات ----------
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) =>
           MainShell(navigationShell: navigationShell),
@@ -69,7 +72,14 @@ final GoRouter appRouter = GoRouter(
           routes: [
             GoRoute(
               path: AppRoutes.home,
-                            builder: (context, state) => const HomeScreen(),
+              builder: (context, state) => const HomeScreen(),
+              routes: [
+                // مسار فرعي: /home/search
+                GoRoute(
+                  path: 'search',
+                  builder: (context, state) => const SearchScreen(),
+                ),
+              ],
             ),
           ],
         ),
@@ -101,7 +111,6 @@ final GoRouter appRouter = GoRouter(
             ),
           ],
         ),
-        
         StatefulShellBranch(
           routes: [
             GoRoute(

@@ -79,5 +79,14 @@
   "notSpecified": "Non précisé",
   "addToCart": "Ajouter au panier",
   "addedToCart": "Ajouté au panier",
-  "productNotFound": "Produit introuvable"
+  "productNotFound": "Produit introuvable",
+  "recentSearches": "Recherches récentes",
+  "clearAll": "Tout effacer",
+  "mostSearched": "Les plus recherchés",
+  "filterPrice": "Prix",
+  "filterAvailability": "Disponibilité",
+  "filterCategory": "Catégorie",
+  "noResults": "Aucun résultat",
+  "noResultsHint": "Essayez d’autres mots-clés",
+  "resultsCount": "{count, plural, =0{Aucun résultat} =1{1 résultat} other{{count} résultats}}"
 }

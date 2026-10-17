@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../core/localization/l10n_extension.dart';
+import '../../../core/router/app_routes.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_dimens.dart';
 
-/// شريط البحث: أيقونة البحث في البداية، وأيقونة الفلتر في النهاية.
+/// شريط البحث (للعرض): أيقونة البحث في البداية، وأيقونة الفلتر في النهاية.
+/// الضغط عليه يفتح شاشة البحث.
 class SearchField extends StatelessWidget {
-  const SearchField({super.key, this.onTap});
-
-  final VoidCallback? onTap; // نربطوه بشاشة البحث لاحقا
+  const SearchField({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class SearchField extends StatelessWidget {
         side: const BorderSide(color: AppColors.primaryLight),
       ),
       child: InkWell(
-        onTap: onTap,
+        onTap: () => context.go(AppRoutes.search),
         child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: AppSpacing.md,

@@ -261,4 +261,40 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get productNotFound => 'Produit introuvable';
+
+  @override
+  String get recentSearches => 'Recherches récentes';
+
+  @override
+  String get clearAll => 'Tout effacer';
+
+  @override
+  String get mostSearched => 'Les plus recherchés';
+
+  @override
+  String get filterPrice => 'Prix';
+
+  @override
+  String get filterAvailability => 'Disponibilité';
+
+  @override
+  String get filterCategory => 'Catégorie';
+
+  @override
+  String get noResults => 'Aucun résultat';
+
+  @override
+  String get noResultsHint => 'Essayez d’autres mots-clés';
+
+  @override
+  String resultsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count résultats',
+      one: '1 résultat',
+      zero: 'Aucun résultat',
+    );
+    return '$_temp0';
+  }
 }

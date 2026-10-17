@@ -10,6 +10,7 @@ import 'data/mock_categories.dart';
 import 'data/mock_products.dart';
 import 'models/product.dart';
 import 'widgets/product_card.dart';
+import 'widgets/pill_button.dart';
 
 /// طرق ترتيب المنتجات.
 enum ProductSort { none, priceLow, priceHigh }
@@ -149,7 +150,7 @@ class _CategoryProductsScreenState extends State<CategoryProductsScreen> {
                             ),
                           ),
                       ],
-                      child: _PillButton(
+                      child: PillButton(
                         label: _sort == ProductSort.none
                             ? l10n.sortBy
                             : _sortLabel(_sort),
@@ -159,7 +160,7 @@ class _CategoryProductsScreenState extends State<CategoryProductsScreen> {
                     ),
                     const SizedBox(width: AppSpacing.sm),
                     // التصفية: نبنيوها لاحقا مع الـ Backend
-                    _PillButton(
+                    PillButton(
                       label: l10n.filterLabel,
                       icon: Icons.tune_rounded,
                     ),
@@ -261,51 +262,3 @@ class _SortOptionRow extends StatelessWidget {
   }
 }
 
-/// زر بشكل حبة (Pill): نص + أيقونة، شكل فقط.
-/// الضغط يتكفل بيه من حواليه (مثلا PopupMenuButton).
-class _PillButton extends StatelessWidget {
-  const _PillButton({
-    required this.label,
-    required this.icon,
-    this.active = false,
-  });
-
-  final String label;
-  final IconData icon;
-  final bool active; // مفعّل: لون بنفسجي
-
-  @override
-  Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-
-    return Material(
-      color: active ? AppColors.primaryLight : Colors.white,
-      shape: StadiumBorder(
-        side: BorderSide(
-          color: active ? AppColors.primary : AppColors.primaryLight,
-        ),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              label,
-              style: textTheme.bodyMedium?.copyWith(
-                fontWeight: FontWeight.w600,
-                color: active ? AppColors.primary : AppColors.text,
-              ),
-            ),
-            const SizedBox(width: 6),
-            Icon(
-              icon,
-              size: 18,
-              color: active ? AppColors.primary : AppColors.textMuted,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
