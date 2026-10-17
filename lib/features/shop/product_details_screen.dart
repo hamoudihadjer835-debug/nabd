@@ -10,6 +10,7 @@ import '../../core/widgets/circle_back_button.dart';
 import 'data/mock_products.dart';
 import 'models/product.dart';
 import 'widgets/status_badge.dart';
+import '../cart/cart_actions.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   const ProductDetailsScreen({super.key, required this.productId});
@@ -29,13 +30,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     } else {
       context.go(AppRoutes.home);
     }
-  }
-
-  void _addToCart() {
-    // مؤقت: السلة الحقيقية نبنيوها في الخطوة الجاية
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(context.l10n.addedToCart)),
-    );
   }
 
   @override
@@ -215,7 +209,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                 height: 52,
                 child: ElevatedButton(
                   // null = الزر معطل (المنتج نفد)
-                  onPressed: isOut ? null : _addToCart,
+                  onPressed: isOut ? null : () => addToCart(context, product),
                   child: Text(isOut ? l10n.statusOutOfStock : l10n.addToCart),
                 ),
               ),

@@ -297,4 +297,41 @@ class AppLocalizationsFr extends AppLocalizations {
     );
     return '$_temp0';
   }
+
+  @override
+  String cartItemsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count articles',
+      one: '1 article',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get subtotal => 'Sous-total';
+
+  @override
+  String get deliveryFee => 'Livraison';
+
+  @override
+  String get total => 'Total';
+
+  @override
+  String get proceedToPayment => 'Passer au paiement';
+
+  @override
+  String get cartEmptyTitle => 'Votre panier est vide';
+
+  @override
+  String get cartEmptyHint =>
+      'Ajoutez des fournitures médicales à votre panier, elles apparaîtront ici';
+
+  @override
+  String get browseProducts => 'Parcourir les produits';
+
+  @override
+  String get maxQuantityReached =>
+      'Vous avez atteint la quantité maximale disponible';
 }

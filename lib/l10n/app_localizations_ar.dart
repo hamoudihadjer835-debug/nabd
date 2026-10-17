@@ -292,4 +292,42 @@ class AppLocalizationsAr extends AppLocalizations {
     );
     return '$_temp0';
   }
+
+  @override
+  String cartItemsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count منتج',
+      many: '$count منتجًا',
+      few: '$count منتجات',
+      two: 'منتجان',
+      one: 'منتج واحد',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get subtotal => 'المجموع الفرعي';
+
+  @override
+  String get deliveryFee => 'التوصيل';
+
+  @override
+  String get total => 'الإجمالي';
+
+  @override
+  String get proceedToPayment => 'متابعة إلى الدفع';
+
+  @override
+  String get cartEmptyTitle => 'سلتك فارغة';
+
+  @override
+  String get cartEmptyHint => 'أضف مستلزمات طبية إلى السلة وستظهر هنا';
+
+  @override
+  String get browseProducts => 'تصفّح المنتجات';
+
+  @override
+  String get maxQuantityReached => 'وصلت إلى أقصى كمية متاحة';
 }

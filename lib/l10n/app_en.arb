@@ -103,11 +103,27 @@
   "noResults": "No results found",
   "noResultsHint": "Try different keywords",
   "resultsCount": "{count, plural, =0{No results} =1{1 result} other{{count} results}}",
-  "@resultsCount": {
+    "@resultsCount": {
     "placeholders": {
       "count": {
         "type": "int"
       }
     }
-  }
+  },
+  "cartItemsCount": "{count, plural, =1{1 item} other{{count} items}}",
+  "@cartItemsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "subtotal": "Subtotal",
+  "deliveryFee": "Delivery",
+  "total": "Total",
+  "proceedToPayment": "Proceed to payment",
+  "cartEmptyTitle": "Your cart is empty",
+  "cartEmptyHint": "Add medical supplies to your cart and they will show up here",
+  "browseProducts": "Browse products",
+  "maxQuantityReached": "You have reached the maximum available quantity"
 }

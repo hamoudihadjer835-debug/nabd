@@ -633,6 +633,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{count, plural, =0{No results} =1{1 result} other{{count} results}}'**
   String resultsCount(int count);
+
+  /// No description provided for @cartItemsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 item} other{{count} items}}'**
+  String cartItemsCount(int count);
+
+  /// No description provided for @subtotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Subtotal'**
+  String get subtotal;
+
+  /// No description provided for @deliveryFee.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery'**
+  String get deliveryFee;
+
+  /// No description provided for @total.
+  ///
+  /// In en, this message translates to:
+  /// **'Total'**
+  String get total;
+
+  /// No description provided for @proceedToPayment.
+  ///
+  /// In en, this message translates to:
+  /// **'Proceed to payment'**
+  String get proceedToPayment;
+
+  /// No description provided for @cartEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your cart is empty'**
+  String get cartEmptyTitle;
+
+  /// No description provided for @cartEmptyHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Add medical supplies to your cart and they will show up here'**
+  String get cartEmptyHint;
+
+  /// No description provided for @browseProducts.
+  ///
+  /// In en, this message translates to:
+  /// **'Browse products'**
+  String get browseProducts;
+
+  /// No description provided for @maxQuantityReached.
+  ///
+  /// In en, this message translates to:
+  /// **'You have reached the maximum available quantity'**
+  String get maxQuantityReached;
 }
 
 class _AppLocalizationsDelegate

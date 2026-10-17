@@ -1,35 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:intl/intl.dart';
-
-import '../../../core/localization/l10n_extension.dart';
 import '../../../core/router/app_routes.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_dimens.dart';
+import '../../../core/utils/price_format.dart';
+import '../../cart/cart_actions.dart';
 import '../models/product.dart';
 import 'status_badge.dart';
 
 /// بطاقة منتج: شارة الحالة، قلب، صورة، اسم، سعر، وزر إضافة.
-/// الضغط على البطاقة يفتح صفحة تفاصيل المنتج.
+/// الضغط على البطاقة يفتح التفاصيل، والضغط على + يضيف للسلة.
 class ProductCard extends StatelessWidget {
-  const ProductCard({
-    super.key,
-    required this.product,
-    this.onAdd,
-  });
+  const ProductCard({super.key, required this.product});
 
   final Product product;
-  final VoidCallback? onAdd; // إضافة للسلة (نربطوها لاحقا)
 
   @override
   Widget build(BuildContext context) {
-    final l10n = context.l10n;
     final textTheme = Theme.of(context).textTheme;
     final locale = Localizations.localeOf(context);
-
-    // نكتبو الأرقام بالإنجليزية (4,500) حتى في العربية، كما في Figma
-    final priceText =
-        '${NumberFormat.decimalPattern('en').format(product.price)} ${l10n.currency}';
 
     return Container(
       decoration: BoxDecoration(
@@ -100,14 +89,18 @@ class ProductCard extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      priceText,
+                      formatPrice(context, product.price),
                       style: textTheme.bodyMedium?.copyWith(
                         fontWeight: FontWeight.w700,
                         color: AppColors.primary,
                       ),
                     ),
                     const Spacer(),
-                    _AddButton(onTap: onAdd),
+                    _AddButton(
+                      // رمادي إذا المنتج نفد (كما في Figma)
+                      enabled: product.status != ProductStatus.outOfStock,
+                      onTap: () => addToCart(context, product),
+                    ),
                   ],
                 ),
               ],
@@ -119,16 +112,17 @@ class ProductCard extends StatelessWidget {
   }
 }
 
-/// زر "+" البنفسجي.
+/// زر "+": بنفسجي، أو رمادي إذا المنتج نفد.
 class _AddButton extends StatelessWidget {
-  const _AddButton({this.onTap});
+  const _AddButton({required this.enabled, required this.onTap});
 
-  final VoidCallback? onTap;
+  final bool enabled;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppColors.primary,
+      color: enabled ? AppColors.primary : AppColors.textMuted,
       borderRadius: BorderRadius.circular(8),
       child: InkWell(
         borderRadius: BorderRadius.circular(8),

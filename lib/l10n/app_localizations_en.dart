@@ -291,4 +291,41 @@ class AppLocalizationsEn extends AppLocalizations {
     );
     return '$_temp0';
   }
+
+  @override
+  String cartItemsCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count items',
+      one: '1 item',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get subtotal => 'Subtotal';
+
+  @override
+  String get deliveryFee => 'Delivery';
+
+  @override
+  String get total => 'Total';
+
+  @override
+  String get proceedToPayment => 'Proceed to payment';
+
+  @override
+  String get cartEmptyTitle => 'Your cart is empty';
+
+  @override
+  String get cartEmptyHint =>
+      'Add medical supplies to your cart and they will show up here';
+
+  @override
+  String get browseProducts => 'Browse products';
+
+  @override
+  String get maxQuantityReached =>
+      'You have reached the maximum available quantity';
 }

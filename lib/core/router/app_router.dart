@@ -17,6 +17,7 @@ import '../localization/l10n_extension.dart';
 import '../widgets/coming_soon_screen.dart';
 import '../widgets/main_shell.dart';
 import 'app_routes.dart';
+import '../../features/cart/cart_screen.dart';
 
 /// جدول التنقل: كل عنوان مربوط بشاشة.
 final GoRouter appRouter = GoRouter(
@@ -104,10 +105,7 @@ final GoRouter appRouter = GoRouter(
           routes: [
             GoRoute(
               path: AppRoutes.cart,
-              builder: (context, state) => ComingSoonScreen(
-                title: context.l10n.tabCart,
-                icon: Icons.shopping_cart_outlined,
-              ),
+              builder: (context, state) => const CartScreen(),
             ),
           ],
         ),
