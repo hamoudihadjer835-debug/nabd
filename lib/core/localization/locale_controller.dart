@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
 /// اللغة الحالية للتطبيق. أي شاشة تبدل القيمة، والتطبيق كامل يتحدث تلقائيا.
-/// الافتراضي: الإنجليزية.
+/// الافتراضي دابا: العربية (نزيدو زر تغيير اللغة في Profile).
 final ValueNotifier<Locale> appLocale =
-    ValueNotifier<Locale>(const Locale('en'));
+    ValueNotifier<Locale>(const Locale('ar'));

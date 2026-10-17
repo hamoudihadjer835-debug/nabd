@@ -53,5 +53,27 @@
   "statusOutOfStock": "Out of stock",
   "currency": "DA",
   "featuredProducts": "Featured products",
-  "viewAll": "View all"
+  "viewAll": "View all",
+  "searchHint": "Search for medical supplies...",
+  "catMeasure": "Measuring",
+  "catExam": "Examination",
+  "catWounds": "Wounds",
+  "catSupplies": "Supplies",
+  "promoTitle": "Weekly offers",
+  "promoSubtitle": "Discounts on measuring and examination devices",
+  "promoButton": "Shop now",
+  "productsCount": "{count} products",
+  "@productsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "sortBy": "Sort by",
+  "filterLabel": "Filter",
+  "sortDefault": "Default",
+  "sortPriceLow": "Price: low to high",
+  "sortPriceHigh": "Price: high to low",
+  "noProductsInCategory": "No products in this category yet"
 }

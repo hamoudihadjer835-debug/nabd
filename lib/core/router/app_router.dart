@@ -13,6 +13,8 @@ import '../widgets/coming_soon_screen.dart';
 import '../widgets/main_shell.dart';
 import 'app_routes.dart';
 import '../../features/shop/home_screen.dart';
+import '../../features/shop/categories_screen.dart';
+import '../../features/shop/category_products_screen.dart';
 
 /// جدول التنقل: كل عنوان مربوط بشاشة.
 final GoRouter appRouter = GoRouter(
@@ -68,10 +70,16 @@ final GoRouter appRouter = GoRouter(
           routes: [
             GoRoute(
               path: AppRoutes.categories,
-              builder: (context, state) => ComingSoonScreen(
-                title: context.l10n.tabCategories,
-                icon: Icons.grid_view_outlined,
-              ),
+              builder: (context, state) => const CategoriesScreen(),
+              routes: [
+                // مسار فرعي: /categories/:categoryId
+                GoRoute(
+                  path: ':categoryId',
+                  builder: (context, state) => CategoryProductsScreen(
+                    categoryId: state.pathParameters['categoryId'] ?? '',
+                  ),
+                ),
+              ],
             ),
           ],
         ),

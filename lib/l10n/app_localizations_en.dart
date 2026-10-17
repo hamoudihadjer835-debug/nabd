@@ -173,4 +173,51 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get viewAll => 'View all';
+
+  @override
+  String get searchHint => 'Search for medical supplies...';
+
+  @override
+  String get catMeasure => 'Measuring';
+
+  @override
+  String get catExam => 'Examination';
+
+  @override
+  String get catWounds => 'Wounds';
+
+  @override
+  String get catSupplies => 'Supplies';
+
+  @override
+  String get promoTitle => 'Weekly offers';
+
+  @override
+  String get promoSubtitle => 'Discounts on measuring and examination devices';
+
+  @override
+  String get promoButton => 'Shop now';
+
+  @override
+  String productsCount(int count) {
+    return '$count products';
+  }
+
+  @override
+  String get sortBy => 'Sort by';
+
+  @override
+  String get filterLabel => 'Filter';
+
+  @override
+  String get sortDefault => 'Default';
+
+  @override
+  String get sortPriceLow => 'Price: low to high';
+
+  @override
+  String get sortPriceHigh => 'Price: high to low';
+
+  @override
+  String get noProductsInCategory => 'No products in this category yet';
 }

@@ -53,5 +53,20 @@
   "statusOutOfStock": "نفد المخزون",
   "currency": "دج",
   "featuredProducts": "منتجات مميزة",
-  "viewAll": "عرض الكل"
+  "viewAll": "عرض الكل",
+  "searchHint": "ابحث عن مستلزمات طبية...",
+  "catMeasure": "القياس",
+  "catExam": "الفحص",
+  "catWounds": "الجروح",
+  "catSupplies": "المستلزمات",
+  "promoTitle": "عروض الأسبوع",
+  "promoSubtitle": "تخفيضات على أجهزة القياس والفحص",
+  "promoButton": "تسوق الآن",
+  "productsCount": "{count} منتجًا",
+  "sortBy": "ترتيب حسب",
+  "filterLabel": "تصفية",
+  "sortDefault": "الافتراضي",
+  "sortPriceLow": "السعر: من الأقل إلى الأعلى",
+  "sortPriceHigh": "السعر: من الأعلى إلى الأقل",
+  "noProductsInCategory": "لا توجد منتجات في هذا القسم بعد"
 }

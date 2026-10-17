@@ -177,4 +177,53 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get viewAll => 'Voir tout';
+
+  @override
+  String get searchHint => 'Rechercher des fournitures médicales...';
+
+  @override
+  String get catMeasure => 'Mesure';
+
+  @override
+  String get catExam => 'Examen';
+
+  @override
+  String get catWounds => 'Plaies';
+
+  @override
+  String get catSupplies => 'Fournitures';
+
+  @override
+  String get promoTitle => 'Offres de la semaine';
+
+  @override
+  String get promoSubtitle =>
+      'Réductions sur les appareils de mesure et d’examen';
+
+  @override
+  String get promoButton => 'Acheter maintenant';
+
+  @override
+  String productsCount(int count) {
+    return '$count produits';
+  }
+
+  @override
+  String get sortBy => 'Trier par';
+
+  @override
+  String get filterLabel => 'Filtrer';
+
+  @override
+  String get sortDefault => 'Par défaut';
+
+  @override
+  String get sortPriceLow => 'Prix : croissant';
+
+  @override
+  String get sortPriceHigh => 'Prix : décroissant';
+
+  @override
+  String get noProductsInCategory =>
+      'Aucun produit dans cette catégorie pour le moment';
 }

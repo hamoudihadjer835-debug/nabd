@@ -17,4 +17,7 @@ class AppRoutes {
   static const String cart = '/cart';
   static const String orders = '/orders';
   static const String profile = '/profile';
+    /// عنوان منتجات قسم معين، مثلا: /categories/c1
+  static String categoryProducts(String categoryId) =>
+      '$categories/$categoryId';
 }

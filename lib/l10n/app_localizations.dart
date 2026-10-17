@@ -423,6 +423,96 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'View all'**
   String get viewAll;
+
+  /// No description provided for @searchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search for medical supplies...'**
+  String get searchHint;
+
+  /// No description provided for @catMeasure.
+  ///
+  /// In en, this message translates to:
+  /// **'Measuring'**
+  String get catMeasure;
+
+  /// No description provided for @catExam.
+  ///
+  /// In en, this message translates to:
+  /// **'Examination'**
+  String get catExam;
+
+  /// No description provided for @catWounds.
+  ///
+  /// In en, this message translates to:
+  /// **'Wounds'**
+  String get catWounds;
+
+  /// No description provided for @catSupplies.
+  ///
+  /// In en, this message translates to:
+  /// **'Supplies'**
+  String get catSupplies;
+
+  /// No description provided for @promoTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly offers'**
+  String get promoTitle;
+
+  /// No description provided for @promoSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Discounts on measuring and examination devices'**
+  String get promoSubtitle;
+
+  /// No description provided for @promoButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Shop now'**
+  String get promoButton;
+
+  /// No description provided for @productsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} products'**
+  String productsCount(int count);
+
+  /// No description provided for @sortBy.
+  ///
+  /// In en, this message translates to:
+  /// **'Sort by'**
+  String get sortBy;
+
+  /// No description provided for @filterLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter'**
+  String get filterLabel;
+
+  /// No description provided for @sortDefault.
+  ///
+  /// In en, this message translates to:
+  /// **'Default'**
+  String get sortDefault;
+
+  /// No description provided for @sortPriceLow.
+  ///
+  /// In en, this message translates to:
+  /// **'Price: low to high'**
+  String get sortPriceLow;
+
+  /// No description provided for @sortPriceHigh.
+  ///
+  /// In en, this message translates to:
+  /// **'Price: high to low'**
+  String get sortPriceHigh;
+
+  /// No description provided for @noProductsInCategory.
+  ///
+  /// In en, this message translates to:
+  /// **'No products in this category yet'**
+  String get noProductsInCategory;
 }
 
 class _AppLocalizationsDelegate

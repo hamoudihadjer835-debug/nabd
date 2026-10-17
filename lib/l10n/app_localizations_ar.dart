@@ -171,4 +171,51 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get viewAll => 'عرض الكل';
+
+  @override
+  String get searchHint => 'ابحث عن مستلزمات طبية...';
+
+  @override
+  String get catMeasure => 'القياس';
+
+  @override
+  String get catExam => 'الفحص';
+
+  @override
+  String get catWounds => 'الجروح';
+
+  @override
+  String get catSupplies => 'المستلزمات';
+
+  @override
+  String get promoTitle => 'عروض الأسبوع';
+
+  @override
+  String get promoSubtitle => 'تخفيضات على أجهزة القياس والفحص';
+
+  @override
+  String get promoButton => 'تسوق الآن';
+
+  @override
+  String productsCount(int count) {
+    return '$count منتجًا';
+  }
+
+  @override
+  String get sortBy => 'ترتيب حسب';
+
+  @override
+  String get filterLabel => 'تصفية';
+
+  @override
+  String get sortDefault => 'الافتراضي';
+
+  @override
+  String get sortPriceLow => 'السعر: من الأقل إلى الأعلى';
+
+  @override
+  String get sortPriceHigh => 'السعر: من الأعلى إلى الأقل';
+
+  @override
+  String get noProductsInCategory => 'لا توجد منتجات في هذا القسم بعد';
 }

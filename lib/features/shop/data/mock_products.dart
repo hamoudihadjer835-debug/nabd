@@ -6,6 +6,7 @@ import '../models/product.dart';
 const List<Product> mockProducts = [
   Product(
     id: 'p1',
+    categoryId: 'c1',
     name: LocalizedText(
       ar: 'جهاز قياس ضغط الدم الرقمي',
       en: 'Digital blood pressure monitor',
@@ -16,6 +17,7 @@ const List<Product> mockProducts = [
   ),
   Product(
     id: 'p2',
+    categoryId: 'c1',
     name: LocalizedText(
       ar: 'جهاز قياس ضغط الدم المعصم',
       en: 'Wrist blood pressure monitor',
@@ -26,6 +28,7 @@ const List<Product> mockProducts = [
   ),
   Product(
     id: 'p3',
+    categoryId: 'c1',
     name: LocalizedText(
       ar: 'جهاز قياس ضغط الدم الناطق',
       en: 'Talking blood pressure monitor',
@@ -36,6 +39,7 @@ const List<Product> mockProducts = [
   ),
   Product(
     id: 'p4',
+    categoryId: 'c1',
     name: LocalizedText(
       ar: 'جهاز قياس ضغط الدم المنزلي',
       en: 'Home blood pressure monitor',

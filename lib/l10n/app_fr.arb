@@ -53,5 +53,21 @@
   "statusOutOfStock": "Rupture de stock",
   "currency": "DA",
   "featuredProducts": "Produits en vedette",
-  "viewAll": "Voir tout"
+  "viewAll": "Voir tout",
+  "searchHint": "Rechercher des fournitures médicales...",
+  "catMeasure": "Mesure",
+  "catExam": "Examen",
+  "catWounds": "Plaies",
+  "catSupplies": "Fournitures",
+  "promoTitle": "Offres de la semaine",
+  "promoSubtitle": "Réductions sur les appareils de mesure et d’examen",
+  "promoButton": "Acheter maintenant",
+  "productsCount": "{count} produits",
+  "sortBy": "Trier par",
+  "filterLabel": "Filtrer",
+  "sortDefault": "Par défaut",
+  "sortPriceLow": "Prix : croissant",
+  "sortPriceHigh": "Prix : décroissant",
+  "noProductsInCategory": "Aucun produit dans cette catégorie pour le moment"
+
 }
