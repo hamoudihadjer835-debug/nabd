@@ -24,6 +24,9 @@ class AppRoutes {
   /// شاشة المفضلة: مسار فرعي داخل تبويب Profile.
   static const String favorites = '/profile/favorites';
 
+  /// شاشة اللغة: ملء الشاشة بلا الشريط السفلي.
+  static const String language = '/language';
+
   /// عنوان منتجات قسم معين، مثلا: /categories/c1
   static String categoryProducts(String categoryId) =>
       '$categories/$categoryId';

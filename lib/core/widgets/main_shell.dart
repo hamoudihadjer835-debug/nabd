@@ -5,7 +5,7 @@ import '../../features/cart/cart_controller.dart';
 import '../localization/l10n_extension.dart';
 import '../theme/app_colors.dart';
 
-/// الهيكل الرئيسي للتطبيق: محتوى التبويب الحالي + الشريط السفلي.
+/// الهيكل الرئيسي للتطبيق: محتوى التبويب الحالي + الشريط السفلي (5 تبويبات).
 class MainShell extends StatelessWidget {
   const MainShell({super.key, required this.navigationShell});
 
@@ -82,6 +82,11 @@ class MainShell extends StatelessWidget {
                   icon: _cartIcon(Icons.shopping_cart_outlined, count),
                   selectedIcon: _cartIcon(Icons.shopping_cart_rounded, count),
                   label: l10n.tabCart,
+                ),
+                NavigationDestination(
+                  icon: const Icon(Icons.inventory_2_outlined),
+                  selectedIcon: const Icon(Icons.inventory_2_rounded),
+                  label: l10n.tabOrders,
                 ),
                 NavigationDestination(
                   icon: const Icon(Icons.person_outline_rounded),

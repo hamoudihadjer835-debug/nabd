@@ -353,4 +353,47 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get favoritesEmptyHint => 'اضغط على القلب في أي منتج يعجبك وستجده هنا';
+
+  @override
+  String get profileNamePlaceholder => '[الاسم الكامل]';
+
+  @override
+  String get menuMyData => 'بياناتي';
+
+  @override
+  String get menuAddresses => 'عناويني';
+
+  @override
+  String get menuNotifications => 'الإشعارات';
+
+  @override
+  String get menuLanguage => 'اللغة';
+
+  @override
+  String get menuHelp => 'المساعدة';
+
+  @override
+  String get menuLogout => 'تسجيل الخروج';
+
+  @override
+  String get langArabicDesc => 'اللغة العربية';
+
+  @override
+  String get langFrenchDesc => 'اللغة الفرنسية';
+
+  @override
+  String get langEnglishDesc => 'اللغة الإنجليزية';
+
+  @override
+  String get save => 'حفظ';
+
+  @override
+  String get cancel => 'إلغاء';
+
+  @override
+  String get logoutConfirmTitle => 'تسجيل الخروج؟';
+
+  @override
+  String get logoutConfirmMessage =>
+      'ستحتاج إلى تسجيل الدخول مرة أخرى للوصول إلى حسابك.';
 }

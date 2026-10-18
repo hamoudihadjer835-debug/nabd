@@ -349,4 +349,47 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get favoritesEmptyHint =>
       'Tap the heart on any product you like and you’ll find it here';
+
+  @override
+  String get profileNamePlaceholder => '[Full name]';
+
+  @override
+  String get menuMyData => 'My details';
+
+  @override
+  String get menuAddresses => 'My addresses';
+
+  @override
+  String get menuNotifications => 'Notifications';
+
+  @override
+  String get menuLanguage => 'Language';
+
+  @override
+  String get menuHelp => 'Help & Support';
+
+  @override
+  String get menuLogout => 'Log out';
+
+  @override
+  String get langArabicDesc => 'Arabic language';
+
+  @override
+  String get langFrenchDesc => 'French language';
+
+  @override
+  String get langEnglishDesc => 'English language';
+
+  @override
+  String get save => 'Save';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get logoutConfirmTitle => 'Log out?';
+
+  @override
+  String get logoutConfirmMessage =>
+      'You will need to sign in again to access your account.';
 }

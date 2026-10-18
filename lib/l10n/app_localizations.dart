@@ -711,6 +711,90 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Tap the heart on any product you like and you’ll find it here'**
   String get favoritesEmptyHint;
+
+  /// No description provided for @profileNamePlaceholder.
+  ///
+  /// In en, this message translates to:
+  /// **'[Full name]'**
+  String get profileNamePlaceholder;
+
+  /// No description provided for @menuMyData.
+  ///
+  /// In en, this message translates to:
+  /// **'My details'**
+  String get menuMyData;
+
+  /// No description provided for @menuAddresses.
+  ///
+  /// In en, this message translates to:
+  /// **'My addresses'**
+  String get menuAddresses;
+
+  /// No description provided for @menuNotifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get menuNotifications;
+
+  /// No description provided for @menuLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get menuLanguage;
+
+  /// No description provided for @menuHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'Help & Support'**
+  String get menuHelp;
+
+  /// No description provided for @menuLogout.
+  ///
+  /// In en, this message translates to:
+  /// **'Log out'**
+  String get menuLogout;
+
+  /// No description provided for @langArabicDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Arabic language'**
+  String get langArabicDesc;
+
+  /// No description provided for @langFrenchDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'French language'**
+  String get langFrenchDesc;
+
+  /// No description provided for @langEnglishDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'English language'**
+  String get langEnglishDesc;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @logoutConfirmTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Log out?'**
+  String get logoutConfirmTitle;
+
+  /// No description provided for @logoutConfirmMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'You will need to sign in again to access your account.'**
+  String get logoutConfirmMessage;
 }
 
 class _AppLocalizationsDelegate

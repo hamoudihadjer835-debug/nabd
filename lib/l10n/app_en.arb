@@ -136,5 +136,19 @@
     }
   },
   "favoritesEmptyTitle": "No favorites yet",
-  "favoritesEmptyHint": "Tap the heart on any product you like and you’ll find it here"
+    "favoritesEmptyHint": "Tap the heart on any product you like and you’ll find it here",
+  "profileNamePlaceholder": "[Full name]",
+  "menuMyData": "My details",
+  "menuAddresses": "My addresses",
+  "menuNotifications": "Notifications",
+  "menuLanguage": "Language",
+  "menuHelp": "Help & Support",
+  "menuLogout": "Log out",
+  "langArabicDesc": "Arabic language",
+  "langFrenchDesc": "French language",
+  "langEnglishDesc": "English language",
+  "save": "Save",
+  "cancel": "Cancel",
+  "logoutConfirmTitle": "Log out?",
+  "logoutConfirmMessage": "You will need to sign in again to access your account."
 }

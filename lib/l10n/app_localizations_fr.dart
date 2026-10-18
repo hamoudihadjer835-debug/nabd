@@ -355,4 +355,47 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get favoritesEmptyHint =>
       'Appuyez sur le cœur d’un produit pour le retrouver ici';
+
+  @override
+  String get profileNamePlaceholder => '[Nom complet]';
+
+  @override
+  String get menuMyData => 'Mes informations';
+
+  @override
+  String get menuAddresses => 'Mes adresses';
+
+  @override
+  String get menuNotifications => 'Notifications';
+
+  @override
+  String get menuLanguage => 'Langue';
+
+  @override
+  String get menuHelp => 'Aide';
+
+  @override
+  String get menuLogout => 'Se déconnecter';
+
+  @override
+  String get langArabicDesc => 'Langue arabe';
+
+  @override
+  String get langFrenchDesc => 'Langue française';
+
+  @override
+  String get langEnglishDesc => 'Langue anglaise';
+
+  @override
+  String get save => 'Enregistrer';
+
+  @override
+  String get cancel => 'Annuler';
+
+  @override
+  String get logoutConfirmTitle => 'Se déconnecter ?';
+
+  @override
+  String get logoutConfirmMessage =>
+      'Vous devrez vous reconnecter pour accéder à votre compte.';
 }

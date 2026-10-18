@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/auth/forgot_password_screen.dart';
@@ -8,6 +9,7 @@ import '../../features/auth/verify_code_screen.dart';
 import '../../features/cart/cart_screen.dart';
 import '../../features/favorites/favorites_screen.dart';
 import '../../features/onboarding/onboarding_screen.dart';
+import '../../features/profile/language_screen.dart';
 import '../../features/profile/profile_screen.dart';
 import '../../features/shop/categories_screen.dart';
 import '../../features/shop/category_products_screen.dart';
@@ -15,6 +17,8 @@ import '../../features/shop/home_screen.dart';
 import '../../features/shop/product_details_screen.dart';
 import '../../features/shop/search_screen.dart';
 import '../../features/splash/splash_screen.dart';
+import '../localization/l10n_extension.dart';
+import '../widgets/coming_soon_screen.dart';
 import '../widgets/main_shell.dart';
 import 'app_routes.dart';
 
@@ -54,15 +58,19 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) => const ResetPasswordScreen(),
     ),
 
-    // ---------- تفاصيل المنتج: ملء الشاشة، بلا الشريط السفلي ----------
+    // ---------- شاشات ملء الشاشة (بلا الشريط السفلي) ----------
     GoRoute(
       path: AppRoutes.productDetailsPattern,
       builder: (context, state) => ProductDetailsScreen(
         productId: state.pathParameters['productId'] ?? '',
       ),
     ),
+    GoRoute(
+      path: AppRoutes.language,
+      builder: (context, state) => const LanguageScreen(),
+    ),
 
-    // ---------- التطبيق الرئيسي: 4 تبويبات ----------
+    // ---------- التطبيق الرئيسي: 5 تبويبات ----------
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) =>
           MainShell(navigationShell: navigationShell),
@@ -105,6 +113,18 @@ final GoRouter appRouter = GoRouter(
             GoRoute(
               path: AppRoutes.cart,
               builder: (context, state) => const CartScreen(),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          routes: [
+            GoRoute(
+              path: AppRoutes.orders,
+              // مؤقت: نبنيوها في مسار الطلب
+              builder: (context, state) => ComingSoonScreen(
+                title: context.l10n.tabOrders,
+                icon: Icons.inventory_2_outlined,
+              ),
             ),
           ],
         ),

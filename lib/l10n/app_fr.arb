@@ -101,5 +101,19 @@
   "favoritesTitle": "Favoris",
   "favoritesCount": "{count, plural, =1{1 produit} other{{count} produits}}",
   "favoritesEmptyTitle": "Aucun favori pour le moment",
-  "favoritesEmptyHint": "Appuyez sur le cœur d’un produit pour le retrouver ici"
+    "favoritesEmptyHint": "Appuyez sur le cœur d’un produit pour le retrouver ici",
+  "profileNamePlaceholder": "[Nom complet]",
+  "menuMyData": "Mes informations",
+  "menuAddresses": "Mes adresses",
+  "menuNotifications": "Notifications",
+  "menuLanguage": "Langue",
+  "menuHelp": "Aide",
+  "menuLogout": "Se déconnecter",
+  "langArabicDesc": "Langue arabe",
+  "langFrenchDesc": "Langue française",
+  "langEnglishDesc": "Langue anglaise",
+  "save": "Enregistrer",
+  "cancel": "Annuler",
+  "logoutConfirmTitle": "Se déconnecter ?",
+  "logoutConfirmMessage": "Vous devrez vous reconnecter pour accéder à votre compte."
 }
