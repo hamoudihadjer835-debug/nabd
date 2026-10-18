@@ -687,6 +687,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'You have reached the maximum available quantity'**
   String get maxQuantityReached;
+
+  /// No description provided for @favoritesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Favorites'**
+  String get favoritesTitle;
+
+  /// No description provided for @favoritesCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 product} other{{count} products}}'**
+  String favoritesCount(int count);
+
+  /// No description provided for @favoritesEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No favorites yet'**
+  String get favoritesEmptyTitle;
+
+  /// No description provided for @favoritesEmptyHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the heart on any product you like and you’ll find it here'**
+  String get favoritesEmptyHint;
 }
 
 class _AppLocalizationsDelegate

@@ -97,5 +97,9 @@
   "cartEmptyTitle": "Votre panier est vide",
   "cartEmptyHint": "Ajoutez des fournitures médicales à votre panier, elles apparaîtront ici",
   "browseProducts": "Parcourir les produits",
-  "maxQuantityReached": "Vous avez atteint la quantité maximale disponible"
+   "maxQuantityReached": "Vous avez atteint la quantité maximale disponible",
+  "favoritesTitle": "Favoris",
+  "favoritesCount": "{count, plural, =1{1 produit} other{{count} produits}}",
+  "favoritesEmptyTitle": "Aucun favori pour le moment",
+  "favoritesEmptyHint": "Appuyez sur le cœur d’un produit pour le retrouver ici"
 }

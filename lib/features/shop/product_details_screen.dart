@@ -1,30 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:intl/intl.dart';
 
 import '../../core/localization/l10n_extension.dart';
 import '../../core/router/app_routes.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_dimens.dart';
+import '../../core/utils/price_format.dart';
 import '../../core/widgets/circle_back_button.dart';
+import '../cart/cart_actions.dart';
+import '../favorites/favorite_toggle.dart';
 import 'data/mock_products.dart';
 import 'models/product.dart';
 import 'widgets/status_badge.dart';
-import '../cart/cart_actions.dart';
 
-class ProductDetailsScreen extends StatefulWidget {
+class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({super.key, required this.productId});
 
   final String productId;
 
-  @override
-  State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();
-}
-
-class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
-  bool _isFavorite = false; // مؤقت: القلب يتبدل في الشاشة فقط، والحفظ لاحقا
-
-  void _goBack() {
+  void _goBack(BuildContext context) {
     if (context.canPop()) {
       context.pop();
     } else {
@@ -38,8 +32,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     final l10n = context.l10n;
     final locale = Localizations.localeOf(context);
 
-    final product =
-        mockProducts.where((p) => p.id == widget.productId).firstOrNull;
+    final product = mockProducts.where((p) => p.id == productId).firstOrNull;
 
     // منتج غير موجود (عنوان غلط): نعرضو رسالة بدل ما يتعطل التطبيق
     if (product == null) {
@@ -51,7 +44,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                 padding: const EdgeInsets.all(AppSpacing.md),
                 child: Align(
                   alignment: AlignmentDirectional.centerStart,
-                  child: CircleBackButton(onPressed: _goBack),
+                  child: CircleBackButton(onPressed: () => _goBack(context)),
                 ),
               ),
               Expanded(
@@ -69,8 +62,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       );
     }
 
-    final priceText =
-        '${NumberFormat.decimalPattern('en').format(product.price)} ${l10n.currency}';
     final isOut = product.status == ProductStatus.outOfStock;
 
     // أسطر المواصفات (القيمة الفارغة تظهر "غير محدد")
@@ -130,15 +121,16 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                           PositionedDirectional(
                             start: 12,
                             top: 12,
-                            child: CircleBackButton(onPressed: _goBack),
+                            child: CircleBackButton(
+                              onPressed: () => _goBack(context),
+                            ),
                           ),
                           PositionedDirectional(
                             end: 12,
                             top: 12,
-                            child: _FavoriteButton(
-                              isFavorite: _isFavorite,
-                              onPressed: () =>
-                                  setState(() => _isFavorite = !_isFavorite),
+                            child: FavoriteToggle(
+                              productId: product.id,
+                              circled: true,
                             ),
                           ),
                         ],
@@ -162,10 +154,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     const SizedBox(height: AppSpacing.sm),
 
                     // الاسم والسعر
-                    Text(product.name.of(locale), style: textTheme.headlineLarge),
+                    Text(
+                      product.name.of(locale),
+                      style: textTheme.headlineLarge,
+                    ),
                     const SizedBox(height: AppSpacing.sm),
                     Text(
-                      priceText,
+                      formatPrice(context, product.price),
                       style: textTheme.headlineLarge
                           ?.copyWith(color: AppColors.primary),
                     ),
@@ -281,36 +276,6 @@ class _SpecsCard extends StatelessWidget {
             ),
           ],
         ],
-      ),
-    );
-  }
-}
-
-/// زر القلب الدائري (أبيض، ويتحول أحمر لما يكون في المفضلة).
-class _FavoriteButton extends StatelessWidget {
-  const _FavoriteButton({required this.isFavorite, required this.onPressed});
-
-  final bool isFavorite;
-  final VoidCallback onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: Colors.white,
-      shape: const CircleBorder(),
-      child: InkWell(
-        customBorder: const CircleBorder(),
-        onTap: onPressed,
-        child: Padding(
-          padding: const EdgeInsets.all(10),
-          child: Icon(
-            isFavorite
-                ? Icons.favorite_rounded
-                : Icons.favorite_border_rounded,
-            size: 20,
-            color: isFavorite ? AppColors.error : AppColors.text,
-          ),
-        ),
       ),
     );
   }

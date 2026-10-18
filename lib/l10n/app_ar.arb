@@ -97,5 +97,9 @@
   "cartEmptyTitle": "سلتك فارغة",
   "cartEmptyHint": "أضف مستلزمات طبية إلى السلة وستظهر هنا",
   "browseProducts": "تصفّح المنتجات",
-  "maxQuantityReached": "وصلت إلى أقصى كمية متاحة"
+    "maxQuantityReached": "وصلت إلى أقصى كمية متاحة",
+  "favoritesTitle": "المفضلة",
+  "favoritesCount": "{count, plural, =1{منتج واحد} =2{منتجان} few{{count} منتجات} many{{count} منتجًا} other{{count} منتج}}",
+  "favoritesEmptyTitle": "لا توجد منتجات في المفضلة بعد",
+  "favoritesEmptyHint": "اضغط على القلب في أي منتج يعجبك وستجده هنا"
 }

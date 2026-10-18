@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/auth/forgot_password_screen.dart';
@@ -6,18 +5,18 @@ import '../../features/auth/login_screen.dart';
 import '../../features/auth/reset_password_screen.dart';
 import '../../features/auth/sign_up_screen.dart';
 import '../../features/auth/verify_code_screen.dart';
+import '../../features/cart/cart_screen.dart';
+import '../../features/favorites/favorites_screen.dart';
 import '../../features/onboarding/onboarding_screen.dart';
+import '../../features/profile/profile_screen.dart';
 import '../../features/shop/categories_screen.dart';
 import '../../features/shop/category_products_screen.dart';
 import '../../features/shop/home_screen.dart';
 import '../../features/shop/product_details_screen.dart';
 import '../../features/shop/search_screen.dart';
 import '../../features/splash/splash_screen.dart';
-import '../localization/l10n_extension.dart';
-import '../widgets/coming_soon_screen.dart';
 import '../widgets/main_shell.dart';
 import 'app_routes.dart';
-import '../../features/cart/cart_screen.dart';
 
 /// جدول التنقل: كل عنوان مربوط بشاشة.
 final GoRouter appRouter = GoRouter(
@@ -113,10 +112,14 @@ final GoRouter appRouter = GoRouter(
           routes: [
             GoRoute(
               path: AppRoutes.profile,
-              builder: (context, state) => ComingSoonScreen(
-                title: context.l10n.tabProfile,
-                icon: Icons.person_outline_rounded,
-              ),
+              builder: (context, state) => const ProfileScreen(),
+              routes: [
+                // مسار فرعي: /profile/favorites
+                GoRoute(
+                  path: 'favorites',
+                  builder: (context, state) => const FavoritesScreen(),
+                ),
+              ],
             ),
           ],
         ),

@@ -328,4 +328,25 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get maxQuantityReached =>
       'You have reached the maximum available quantity';
+
+  @override
+  String get favoritesTitle => 'Favorites';
+
+  @override
+  String favoritesCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count products',
+      one: '1 product',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get favoritesEmptyTitle => 'No favorites yet';
+
+  @override
+  String get favoritesEmptyHint =>
+      'Tap the heart on any product you like and you’ll find it here';
 }

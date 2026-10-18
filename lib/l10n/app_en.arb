@@ -125,5 +125,16 @@
   "cartEmptyTitle": "Your cart is empty",
   "cartEmptyHint": "Add medical supplies to your cart and they will show up here",
   "browseProducts": "Browse products",
-  "maxQuantityReached": "You have reached the maximum available quantity"
+    "maxQuantityReached": "You have reached the maximum available quantity",
+  "favoritesTitle": "Favorites",
+  "favoritesCount": "{count, plural, =1{1 product} other{{count} products}}",
+  "@favoritesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "favoritesEmptyTitle": "No favorites yet",
+  "favoritesEmptyHint": "Tap the heart on any product you like and you’ll find it here"
 }

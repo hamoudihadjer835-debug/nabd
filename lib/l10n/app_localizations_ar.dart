@@ -330,4 +330,27 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get maxQuantityReached => 'وصلت إلى أقصى كمية متاحة';
+
+  @override
+  String get favoritesTitle => 'المفضلة';
+
+  @override
+  String favoritesCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count منتج',
+      many: '$count منتجًا',
+      few: '$count منتجات',
+      two: 'منتجان',
+      one: 'منتج واحد',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get favoritesEmptyTitle => 'لا توجد منتجات في المفضلة بعد';
+
+  @override
+  String get favoritesEmptyHint => 'اضغط على القلب في أي منتج يعجبك وستجده هنا';
 }

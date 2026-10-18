@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
 import '../../../core/router/app_routes.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_dimens.dart';
 import '../../../core/utils/price_format.dart';
 import '../../cart/cart_actions.dart';
+import '../../favorites/favorite_toggle.dart';
 import '../models/product.dart';
 import 'status_badge.dart';
 
 /// بطاقة منتج: شارة الحالة، قلب، صورة، اسم، سعر، وزر إضافة.
-/// الضغط على البطاقة يفتح التفاصيل، والضغط على + يضيف للسلة.
+/// الضغط على البطاقة يفتح التفاصيل، والضغط على + يضيف للسلة، والقلب للمفضلة.
 class ProductCard extends StatelessWidget {
   const ProductCard({super.key, required this.product});
 
@@ -42,16 +44,12 @@ class ProductCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // الصف العلوي: شارة الحالة + قلب
+                // الصف العلوي: شارة الحالة + قلب المفضلة
                 Row(
                   children: [
                     StatusBadge(status: product.status),
                     const Spacer(),
-                    const Icon(
-                      Icons.favorite_border_rounded,
-                      size: 20,
-                      color: AppColors.textMuted,
-                    ),
+                    FavoriteToggle(productId: product.id),
                   ],
                 ),
                 const SizedBox(height: AppSpacing.sm),

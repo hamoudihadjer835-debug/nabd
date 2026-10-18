@@ -21,6 +21,9 @@ class AppRoutes {
   /// شاشة البحث: مسار فرعي داخل تبويب الرئيسية.
   static const String search = '/home/search';
 
+  /// شاشة المفضلة: مسار فرعي داخل تبويب Profile.
+  static const String favorites = '/profile/favorites';
+
   /// عنوان منتجات قسم معين، مثلا: /categories/c1
   static String categoryProducts(String categoryId) =>
       '$categories/$categoryId';
