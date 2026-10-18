@@ -91,7 +91,7 @@ class ProfileScreen extends StatelessWidget {
       _MenuItem(
         icon: Icons.notifications_none_rounded,
         label: l10n.menuNotifications,
-        onTap: () => _comingSoon(context),
+         onTap: () => context.push(AppRoutes.notifications),
       ),
       _MenuItem(
         icon: Icons.language_rounded,

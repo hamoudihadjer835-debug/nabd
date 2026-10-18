@@ -21,7 +21,7 @@ import '../localization/l10n_extension.dart';
 import '../widgets/coming_soon_screen.dart';
 import '../widgets/main_shell.dart';
 import 'app_routes.dart';
-
+import '../../features/notifications/notifications_screen.dart';
 /// جدول التنقل: كل عنوان مربوط بشاشة.
 final GoRouter appRouter = GoRouter(
   initialLocation: AppRoutes.splash,
@@ -138,6 +138,10 @@ final GoRouter appRouter = GoRouter(
                 GoRoute(
                   path: 'favorites',
                   builder: (context, state) => const FavoritesScreen(),
+                ),
+                                GoRoute(
+                  path: 'notifications',
+                  builder: (context, state) => const NotificationsScreen(),
                 ),
               ],
             ),

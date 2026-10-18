@@ -36,4 +36,6 @@ class AppRoutes {
 
   /// عنوان تفاصيل منتج معين، مثلا: /product/p1
   static String product(String productId) => '/product/$productId';
+    /// شاشة الإشعارات: مسار فرعي داخل تبويب Profile.
+  static const String notifications = '/profile/notifications';
 }
