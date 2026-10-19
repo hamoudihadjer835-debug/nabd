@@ -392,4 +392,54 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get logoutConfirmMessage =>
       'You will need to sign in again to access your account.';
+
+  @override
+  String get emailLabel => 'Email';
+
+  @override
+  String get phoneLabel => 'Phone number';
+
+  @override
+  String get changePhoto => 'Change photo';
+
+  @override
+  String get saveChanges => 'Save changes';
+
+  @override
+  String get changesSaved => 'Changes saved';
+
+  @override
+  String get invalidEmail => 'Enter a valid email';
+
+  @override
+  String get invalidPhone =>
+      'Enter a valid mobile number: 10 digits starting with 05, 06 or 07';
+
+  @override
+  String get discardTitle => 'Discard changes?';
+
+  @override
+  String get discardMessage =>
+      'You have unsaved changes. If you leave now, they will be lost.';
+
+  @override
+  String get discardConfirm => 'Discard';
+
+  @override
+  String get keepEditing => 'Keep editing';
+
+  @override
+  String get photoCamera => 'Take a photo';
+
+  @override
+  String get photoGallery => 'Choose from gallery';
+
+  @override
+  String get photoRemove => 'Remove photo';
+
+  @override
+  String get securityTitle => 'Security';
+
+  @override
+  String get changePassword => 'Change password';
 }

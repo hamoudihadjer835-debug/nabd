@@ -22,6 +22,8 @@ import '../widgets/coming_soon_screen.dart';
 import '../widgets/main_shell.dart';
 import 'app_routes.dart';
 import '../../features/notifications/notifications_screen.dart';
+import '../../features/profile/edit_profile_screen.dart';
+
 /// جدول التنقل: كل عنوان مربوط بشاشة.
 final GoRouter appRouter = GoRouter(
   initialLocation: AppRoutes.splash,
@@ -68,6 +70,10 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: AppRoutes.language,
       builder: (context, state) => const LanguageScreen(),
+    ),
+        GoRoute(
+      path: AppRoutes.editProfile,
+      builder: (context, state) => const EditProfileScreen(),
     ),
 
     // ---------- التطبيق الرئيسي: 5 تبويبات ----------

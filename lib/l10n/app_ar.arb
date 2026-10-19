@@ -115,5 +115,21 @@
   "save": "حفظ",
   "cancel": "إلغاء",
   "logoutConfirmTitle": "تسجيل الخروج؟",
-  "logoutConfirmMessage": "ستحتاج إلى تسجيل الدخول مرة أخرى للوصول إلى حسابك."
+    "logoutConfirmMessage": "ستحتاج إلى تسجيل الدخول مرة أخرى للوصول إلى حسابك.",
+  "emailLabel": "البريد الإلكتروني",
+  "phoneLabel": "رقم الهاتف",
+  "changePhoto": "تغيير الصورة",
+  "saveChanges": "حفظ التغييرات",
+  "changesSaved": "تم حفظ التغييرات",
+  "invalidEmail": "أدخل بريدًا إلكترونيًا صحيحًا",
+    "invalidPhone": "أدخل رقم هاتف محمول صحيحًا: 10 أرقام تبدأ بـ 05 أو 06 أو 07",
+  "discardTitle": "تجاهل التغييرات؟",
+  "discardMessage": "لديك تغييرات غير محفوظة. إذا غادرت الآن ستضيع.",
+  "discardConfirm": "تجاهل",
+  "keepEditing": "متابعة التعديل",
+  "photoCamera": "التقاط صورة",
+  "photoGallery": "اختيار من المعرض",
+  "photoRemove": "حذف الصورة",
+  "securityTitle": "الأمان",
+  "changePassword": "تغيير كلمة السر"
 }

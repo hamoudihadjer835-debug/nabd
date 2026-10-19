@@ -6,6 +6,8 @@ import '../../core/localization/l10n_extension.dart';
 import '../../core/router/app_routes.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_dimens.dart';
+import 'user_controller.dart';
+
 
 /// سطر في قائمة Profile.
 class _MenuItem {
@@ -76,7 +78,7 @@ class ProfileScreen extends StatelessWidget {
       _MenuItem(
         icon: Icons.person_outline_rounded,
         label: l10n.menuMyData,
-        onTap: () => _comingSoon(context),
+                onTap: () => context.push(AppRoutes.editProfile),
       ),
       _MenuItem(
         icon: Icons.location_on_outlined,
@@ -132,7 +134,8 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 
-/// بطاقة المستخدم: دائرة بأيقونة + الاسم + البريد (بيانات نائبة دابا).
+/// بطاقة المستخدم: دائرة بأيقونة + الاسم + البريد أو الهاتف.
+/// تعرض بيانات المستخدم، وإذا فارغة تعرض قيم نائبة.
 class _UserCard extends StatelessWidget {
   const _UserCard();
 
@@ -140,54 +143,65 @@ class _UserCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
 
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(AppSpacing.md),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: AppRadius.cardBorder,
-        border: Border.all(color: AppColors.primaryLight),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 72,
-            height: 72,
-            decoration: const BoxDecoration(
-              color: AppColors.primaryLight,
-              shape: BoxShape.circle,
-            ),
-            child: const Icon(
-              Icons.person_outline_rounded,
-              size: 32,
-              color: AppColors.primary,
-            ),
+    return ListenableBuilder(
+      listenable: userController,
+      builder: (context, _) {
+        final name = userController.fullName.isNotEmpty
+            ? userController.fullName
+            : context.l10n.profileNamePlaceholder;
+
+        final contact = userController.email.isNotEmpty
+            ? userController.email
+            : (userController.phone.isNotEmpty
+                ? userController.phone
+                : 'example@email.com');
+
+        return Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(AppSpacing.md),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: AppRadius.cardBorder,
+            border: Border.all(color: AppColors.primaryLight),
           ),
-          const SizedBox(width: AppSpacing.md),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  context.l10n.profileNamePlaceholder,
-                  style: textTheme.titleLarge,
+          child: Row(
+            children: [
+              Container(
+                width: 72,
+                height: 72,
+                decoration: const BoxDecoration(
+                  color: AppColors.primaryLight,
+                  shape: BoxShape.circle,
                 ),
-                const SizedBox(height: 4),
-                Text(
-                  'example@email.com',
-                  textDirection: TextDirection.ltr,
-                  style: textTheme.bodyMedium
-                      ?.copyWith(color: AppColors.textMuted),
+                child: const Icon(
+                  Icons.person_outline_rounded,
+                  size: 32,
+                  color: AppColors.primary,
                 ),
-              ],
-            ),
+              ),
+              const SizedBox(width: AppSpacing.md),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(name, style: textTheme.titleLarge),
+                    const SizedBox(height: 4),
+                    Text(
+                      contact,
+                      textDirection: TextDirection.ltr,
+                      style: textTheme.bodyMedium
+                          ?.copyWith(color: AppColors.textMuted),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
+        );
+      },
     );
   }
 }
-
 /// بطاقة القائمة: أسطر يفصل بينها خط رفيع.
 class _MenuCard extends StatelessWidget {
   const _MenuCard({required this.items});

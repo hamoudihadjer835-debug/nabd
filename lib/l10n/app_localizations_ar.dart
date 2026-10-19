@@ -396,4 +396,53 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get logoutConfirmMessage =>
       'ستحتاج إلى تسجيل الدخول مرة أخرى للوصول إلى حسابك.';
+
+  @override
+  String get emailLabel => 'البريد الإلكتروني';
+
+  @override
+  String get phoneLabel => 'رقم الهاتف';
+
+  @override
+  String get changePhoto => 'تغيير الصورة';
+
+  @override
+  String get saveChanges => 'حفظ التغييرات';
+
+  @override
+  String get changesSaved => 'تم حفظ التغييرات';
+
+  @override
+  String get invalidEmail => 'أدخل بريدًا إلكترونيًا صحيحًا';
+
+  @override
+  String get invalidPhone =>
+      'أدخل رقم هاتف محمول صحيحًا: 10 أرقام تبدأ بـ 05 أو 06 أو 07';
+
+  @override
+  String get discardTitle => 'تجاهل التغييرات؟';
+
+  @override
+  String get discardMessage => 'لديك تغييرات غير محفوظة. إذا غادرت الآن ستضيع.';
+
+  @override
+  String get discardConfirm => 'تجاهل';
+
+  @override
+  String get keepEditing => 'متابعة التعديل';
+
+  @override
+  String get photoCamera => 'التقاط صورة';
+
+  @override
+  String get photoGallery => 'اختيار من المعرض';
+
+  @override
+  String get photoRemove => 'حذف الصورة';
+
+  @override
+  String get securityTitle => 'الأمان';
+
+  @override
+  String get changePassword => 'تغيير كلمة السر';
 }

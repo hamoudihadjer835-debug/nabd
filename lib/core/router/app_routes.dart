@@ -26,6 +26,8 @@ class AppRoutes {
 
   /// شاشة اللغة: ملء الشاشة بلا الشريط السفلي.
   static const String language = '/language';
+    /// شاشة تعديل البيانات: ملء الشاشة بلا الشريط السفلي.
+  static const String editProfile = '/edit-profile';
 
   /// عنوان منتجات قسم معين، مثلا: /categories/c1
   static String categoryProducts(String categoryId) =>

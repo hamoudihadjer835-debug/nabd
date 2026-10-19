@@ -150,5 +150,21 @@
   "save": "Save",
   "cancel": "Cancel",
   "logoutConfirmTitle": "Log out?",
-  "logoutConfirmMessage": "You will need to sign in again to access your account."
+  "logoutConfirmMessage": "You will need to sign in again to access your account.",
+  "emailLabel": "Email",
+  "phoneLabel": "Phone number",
+  "changePhoto": "Change photo",
+  "saveChanges": "Save changes",
+  "changesSaved": "Changes saved",
+  "invalidEmail": "Enter a valid email",
+  "invalidPhone": "Enter a valid mobile number: 10 digits starting with 05, 06 or 07",
+  "discardTitle": "Discard changes?",
+  "discardMessage": "You have unsaved changes. If you leave now, they will be lost.",
+  "discardConfirm": "Discard",
+  "keepEditing": "Keep editing",
+  "photoCamera": "Take a photo",
+  "photoGallery": "Choose from gallery",
+  "photoRemove": "Remove photo",
+  "securityTitle": "Security",
+  "changePassword": "Change password"
 }

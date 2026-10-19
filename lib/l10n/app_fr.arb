@@ -115,5 +115,21 @@
   "save": "Enregistrer",
   "cancel": "Annuler",
   "logoutConfirmTitle": "Se déconnecter ?",
-  "logoutConfirmMessage": "Vous devrez vous reconnecter pour accéder à votre compte."
+  "logoutConfirmMessage": "Vous devrez vous reconnecter pour accéder à votre compte.",
+  "emailLabel": "E-mail",
+  "phoneLabel": "Numéro de téléphone",
+  "changePhoto": "Changer la photo",
+  "saveChanges": "Enregistrer les modifications",
+  "changesSaved": "Modifications enregistrées",
+  "invalidEmail": "Saisissez un e-mail valide",
+    "invalidPhone": "Saisissez un numéro mobile valide : 10 chiffres commençant par 05, 06 ou 07",
+  "discardTitle": "Abandonner les modifications ?",
+  "discardMessage": "Vous avez des modifications non enregistrées. Si vous quittez maintenant, elles seront perdues.",
+  "discardConfirm": "Abandonner",
+  "keepEditing": "Continuer",
+  "photoCamera": "Prendre une photo",
+  "photoGallery": "Choisir dans la galerie",
+  "photoRemove": "Supprimer la photo",
+  "securityTitle": "Sécurité",
+  "changePassword": "Changer le mot de passe"
 }

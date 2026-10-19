@@ -398,4 +398,54 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get logoutConfirmMessage =>
       'Vous devrez vous reconnecter pour accéder à votre compte.';
+
+  @override
+  String get emailLabel => 'E-mail';
+
+  @override
+  String get phoneLabel => 'Numéro de téléphone';
+
+  @override
+  String get changePhoto => 'Changer la photo';
+
+  @override
+  String get saveChanges => 'Enregistrer les modifications';
+
+  @override
+  String get changesSaved => 'Modifications enregistrées';
+
+  @override
+  String get invalidEmail => 'Saisissez un e-mail valide';
+
+  @override
+  String get invalidPhone =>
+      'Saisissez un numéro mobile valide : 10 chiffres commençant par 05, 06 ou 07';
+
+  @override
+  String get discardTitle => 'Abandonner les modifications ?';
+
+  @override
+  String get discardMessage =>
+      'Vous avez des modifications non enregistrées. Si vous quittez maintenant, elles seront perdues.';
+
+  @override
+  String get discardConfirm => 'Abandonner';
+
+  @override
+  String get keepEditing => 'Continuer';
+
+  @override
+  String get photoCamera => 'Prendre une photo';
+
+  @override
+  String get photoGallery => 'Choisir dans la galerie';
+
+  @override
+  String get photoRemove => 'Supprimer la photo';
+
+  @override
+  String get securityTitle => 'Sécurité';
+
+  @override
+  String get changePassword => 'Changer le mot de passe';
 }

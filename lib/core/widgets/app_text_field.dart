@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../theme/app_colors.dart';
 import '../theme/app_dimens.dart';
@@ -15,6 +16,10 @@ class AppTextField extends StatelessWidget {
     this.keyboardType,
     this.textInputAction,
     this.suffixIcon,
+    this.inputFormatters,
+    this.onChanged,
+    this.enabled = true,
+    this.ltrInput = false,
   });
 
   final String label;
@@ -25,10 +30,18 @@ class AppTextField extends StatelessWidget {
   final TextInputType? keyboardType;
   final TextInputAction? textInputAction;
   final Widget? suffixIcon;
+  final List<TextInputFormatter>? inputFormatters;
+  final ValueChanged<String>? onChanged;
+  final bool enabled;
+
+  /// للبريد والأرقام: النص من اليسار لليمين (باش ما ينعكسش ترتيبو في العربية)،
+  /// لكن محاذاتو تبقى مع اتجاه الواجهة.
+  final bool ltrInput;
 
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    final isRtl = Directionality.of(context) == TextDirection.rtl;
 
     OutlineInputBorder border(Color color, [double width = 1]) {
       return OutlineInputBorder(
@@ -51,9 +64,20 @@ class AppTextField extends StatelessWidget {
           obscureText: obscureText,
           keyboardType: keyboardType,
           textInputAction: textInputAction,
+          inputFormatters: inputFormatters,
+          onChanged: onChanged,
+          enabled: enabled,
+          // كلمات السر: بلا تصحيح تلقائي ولا اقتراحات
+          autocorrect: !obscureText,
+          enableSuggestions: !obscureText,
+          textDirection: ltrInput ? TextDirection.ltr : null,
+          textAlign: ltrInput
+              ? (isRtl ? TextAlign.right : TextAlign.left)
+              : TextAlign.start,
           style: textTheme.bodyLarge,
           decoration: InputDecoration(
             hintText: hint,
+            hintTextDirection: ltrInput ? TextDirection.ltr : null,
             hintStyle:
                 textTheme.bodyLarge?.copyWith(color: AppColors.textMuted),
             filled: true,

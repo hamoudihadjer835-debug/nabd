@@ -795,6 +795,102 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'You will need to sign in again to access your account.'**
   String get logoutConfirmMessage;
+
+  /// No description provided for @emailLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get emailLabel;
+
+  /// No description provided for @phoneLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone number'**
+  String get phoneLabel;
+
+  /// No description provided for @changePhoto.
+  ///
+  /// In en, this message translates to:
+  /// **'Change photo'**
+  String get changePhoto;
+
+  /// No description provided for @saveChanges.
+  ///
+  /// In en, this message translates to:
+  /// **'Save changes'**
+  String get saveChanges;
+
+  /// No description provided for @changesSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Changes saved'**
+  String get changesSaved;
+
+  /// No description provided for @invalidEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid email'**
+  String get invalidEmail;
+
+  /// No description provided for @invalidPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid mobile number: 10 digits starting with 05, 06 or 07'**
+  String get invalidPhone;
+
+  /// No description provided for @discardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Discard changes?'**
+  String get discardTitle;
+
+  /// No description provided for @discardMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'You have unsaved changes. If you leave now, they will be lost.'**
+  String get discardMessage;
+
+  /// No description provided for @discardConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Discard'**
+  String get discardConfirm;
+
+  /// No description provided for @keepEditing.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep editing'**
+  String get keepEditing;
+
+  /// No description provided for @photoCamera.
+  ///
+  /// In en, this message translates to:
+  /// **'Take a photo'**
+  String get photoCamera;
+
+  /// No description provided for @photoGallery.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose from gallery'**
+  String get photoGallery;
+
+  /// No description provided for @photoRemove.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove photo'**
+  String get photoRemove;
+
+  /// No description provided for @securityTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Security'**
+  String get securityTitle;
+
+  /// No description provided for @changePassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Change password'**
+  String get changePassword;
 }
 
 class _AppLocalizationsDelegate
