@@ -8,6 +8,7 @@ import '../../core/theme/app_dimens.dart';
 import '../../core/utils/validators.dart';
 import '../../core/widgets/app_text_field.dart';
 import '../../core/widgets/language_button.dart';
+import '../../core/utils/password_validation.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -48,11 +49,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return null;
   }
 
-  String? _validatePassword(String? value) {
-    if (value == null || value.isEmpty) return context.l10n.fieldRequired;
-    if (value.length < 6) return context.l10n.passwordTooShort;
-    return null;
-  }
+    String? _validatePassword(String? value) => validateNewPassword(
+        context.l10n,
+        value,
+        emptyMessage: context.l10n.fieldRequired,
+      );
 
   void _submit() {
     FocusScope.of(context).unfocus();

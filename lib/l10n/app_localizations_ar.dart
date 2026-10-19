@@ -25,7 +25,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get passwordLabel => 'كلمة السر';
 
   @override
-  String get passwordHintSignup => '6 أحرف على الأقل';
+  String get passwordHintSignup => '8 أحرف على الأقل';
 
   @override
   String get forgotPassword => 'نسيت كلمة السر؟';
@@ -73,7 +73,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get invalidEmailOrPhone => 'أدخل بريدًا إلكترونيًا أو رقم هاتف صحيحًا';
 
   @override
-  String get passwordTooShort => 'كلمة السر يجب أن تكون 6 أحرف على الأقل';
+  String get passwordTooShort => 'كلمة السر يجب أن تكون 8 أحرف على الأقل';
 
   @override
   String get nameRequired => 'يرجى إدخال اسمك الكامل';
@@ -119,7 +119,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get resetTitle => 'إنشاء كلمة سر جديدة';
 
   @override
-  String get resetSubtitle => 'اختر كلمة سر جديدة من 6 أحرف على الأقل';
+  String get resetSubtitle =>
+      'اختر كلمة سر جديدة من 8 أحرف على الأقل، تتضمن حرفًا ورقمًا';
 
   @override
   String get newPasswordLabel => 'كلمة السر الجديدة';
@@ -276,7 +277,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get noResults => 'لا توجد نتائج';
 
   @override
-  String get noResultsHint => 'جرّب كلمات بحث أخرى';
+  String get noResultsHint => 'جرّب كلمات أخرى أو غيّر الفلاتر';
 
   @override
   String resultsCount(int count) {
@@ -323,7 +324,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get cartEmptyTitle => 'سلتك فارغة';
 
   @override
-  String get cartEmptyHint => 'أضف مستلزمات طبية إلى السلة وستظهر هنا';
+  String get cartEmptyHint => 'أضف منتجات طبية لتظهر هنا';
 
   @override
   String get browseProducts => 'تصفّح المنتجات';
@@ -445,4 +446,70 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get changePassword => 'تغيير كلمة السر';
+
+  @override
+  String get newPasswordRequired => 'أدخل كلمة السر الجديدة';
+
+  @override
+  String get passwordNeedsLetterAndDigit => 'يجب أن تحتوي على حرف ورقم';
+
+  @override
+  String get passwordSameAsCurrent => 'اختر كلمة سر مختلفة عن الحالية';
+
+  @override
+  String get passwordChanged => 'تم تغيير كلمة السر';
+
+  @override
+  String get currentPasswordLabel => 'كلمة السر الحالية';
+
+  @override
+  String get confirmNewPasswordLabel => 'تأكيد كلمة السر الجديدة';
+
+  @override
+  String get currentPasswordWrong => 'كلمة السر الحالية غير صحيحة';
+
+  @override
+  String get forgotCurrentPassword => 'نسيت كلمة السر الحالية؟';
+
+  @override
+  String get passwordStrengthLabel => 'قوة كلمة السر';
+
+  @override
+  String get strengthWeak => 'ضعيفة';
+
+  @override
+  String get strengthMedium => 'متوسطة';
+
+  @override
+  String get strengthStrong => 'قوية';
+
+  @override
+  String get ruleMinLength => '8 أحرف على الأقل';
+
+  @override
+  String get ruleLetter => 'حرف';
+
+  @override
+  String get ruleDigit => 'رقم';
+
+  @override
+  String get genericError => 'حدث خطأ ما. حاول مرة أخرى.';
+
+  @override
+  String get backToSearch => 'العودة للبحث';
+
+  @override
+  String get retry => 'إعادة المحاولة';
+
+  @override
+  String get offlineTitle => 'لا يوجد اتصال بالإنترنت';
+
+  @override
+  String get offlineMessage => 'تحقق من اتصالك ثم حاول مرة أخرى';
+
+  @override
+  String get errorTitle => 'حدث خطأ ما';
+
+  @override
+  String get errorMessage => 'لم نتمكن من إكمال العملية. حاول مرة أخرى.';
 }

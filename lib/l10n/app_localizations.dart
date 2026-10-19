@@ -133,7 +133,7 @@ abstract class AppLocalizations {
   /// No description provided for @passwordHintSignup.
   ///
   /// In en, this message translates to:
-  /// **'At least 6 characters'**
+  /// **'At least 8 characters'**
   String get passwordHintSignup;
 
   /// No description provided for @forgotPassword.
@@ -229,7 +229,7 @@ abstract class AppLocalizations {
   /// No description provided for @passwordTooShort.
   ///
   /// In en, this message translates to:
-  /// **'Password must be at least 6 characters'**
+  /// **'Password must be at least 8 characters'**
   String get passwordTooShort;
 
   /// No description provided for @nameRequired.
@@ -319,7 +319,7 @@ abstract class AppLocalizations {
   /// No description provided for @resetSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'Choose a new password with at least 6 characters'**
+  /// **'Choose a new password with at least 8 characters, including a letter and a digit'**
   String get resetSubtitle;
 
   /// No description provided for @newPasswordLabel.
@@ -625,7 +625,7 @@ abstract class AppLocalizations {
   /// No description provided for @noResultsHint.
   ///
   /// In en, this message translates to:
-  /// **'Try different keywords'**
+  /// **'Try other keywords or change the filters'**
   String get noResultsHint;
 
   /// No description provided for @resultsCount.
@@ -673,7 +673,7 @@ abstract class AppLocalizations {
   /// No description provided for @cartEmptyHint.
   ///
   /// In en, this message translates to:
-  /// **'Add medical supplies to your cart and they will show up here'**
+  /// **'Add medical products and they will show up here'**
   String get cartEmptyHint;
 
   /// No description provided for @browseProducts.
@@ -891,6 +891,138 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Change password'**
   String get changePassword;
+
+  /// No description provided for @newPasswordRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the new password'**
+  String get newPasswordRequired;
+
+  /// No description provided for @passwordNeedsLetterAndDigit.
+  ///
+  /// In en, this message translates to:
+  /// **'Must contain a letter and a digit'**
+  String get passwordNeedsLetterAndDigit;
+
+  /// No description provided for @passwordSameAsCurrent.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a password different from the current one'**
+  String get passwordSameAsCurrent;
+
+  /// No description provided for @passwordChanged.
+  ///
+  /// In en, this message translates to:
+  /// **'Password changed'**
+  String get passwordChanged;
+
+  /// No description provided for @currentPasswordLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Current password'**
+  String get currentPasswordLabel;
+
+  /// No description provided for @confirmNewPasswordLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm new password'**
+  String get confirmNewPasswordLabel;
+
+  /// No description provided for @currentPasswordWrong.
+  ///
+  /// In en, this message translates to:
+  /// **'Current password is incorrect'**
+  String get currentPasswordWrong;
+
+  /// No description provided for @forgotCurrentPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot your current password?'**
+  String get forgotCurrentPassword;
+
+  /// No description provided for @passwordStrengthLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Password strength'**
+  String get passwordStrengthLabel;
+
+  /// No description provided for @strengthWeak.
+  ///
+  /// In en, this message translates to:
+  /// **'Weak'**
+  String get strengthWeak;
+
+  /// No description provided for @strengthMedium.
+  ///
+  /// In en, this message translates to:
+  /// **'Medium'**
+  String get strengthMedium;
+
+  /// No description provided for @strengthStrong.
+  ///
+  /// In en, this message translates to:
+  /// **'Strong'**
+  String get strengthStrong;
+
+  /// No description provided for @ruleMinLength.
+  ///
+  /// In en, this message translates to:
+  /// **'At least 8 characters'**
+  String get ruleMinLength;
+
+  /// No description provided for @ruleLetter.
+  ///
+  /// In en, this message translates to:
+  /// **'A letter'**
+  String get ruleLetter;
+
+  /// No description provided for @ruleDigit.
+  ///
+  /// In en, this message translates to:
+  /// **'A digit'**
+  String get ruleDigit;
+
+  /// No description provided for @genericError.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong. Please try again.'**
+  String get genericError;
+
+  /// No description provided for @backToSearch.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to search'**
+  String get backToSearch;
+
+  /// No description provided for @retry.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get retry;
+
+  /// No description provided for @offlineTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No internet connection'**
+  String get offlineTitle;
+
+  /// No description provided for @offlineMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your connection and try again'**
+  String get offlineMessage;
+
+  /// No description provided for @errorTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong'**
+  String get errorTitle;
+
+  /// No description provided for @errorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'We couldn’t complete the operation. Please try again.'**
+  String get errorMessage;
 }
 
 class _AppLocalizationsDelegate

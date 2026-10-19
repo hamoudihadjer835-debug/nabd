@@ -6,7 +6,7 @@ import '../../core/router/app_routes.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_dimens.dart';
 import '../../core/utils/price_format.dart';
-import '../../core/widgets/icon_badge.dart';
+import '../../core/widgets/status_message.dart';
 import 'cart_controller.dart';
 
 class CartScreen extends StatelessWidget {
@@ -54,7 +54,13 @@ class CartScreen extends StatelessWidget {
                 // المنتجات (تتحرك) أو الحالة الفارغة
                 Expanded(
                   child: items.isEmpty
-                      ? const _EmptyCart()
+                      ? StatusMessage(
+                          icon: Icons.shopping_cart_outlined,
+                          title: l10n.cartEmptyTitle,
+                          message: l10n.cartEmptyHint,
+                          buttonLabel: l10n.browseProducts,
+                          onPressed: () => context.go(AppRoutes.home),
+                        )
                       : ListView.separated(
                           padding: const EdgeInsets.symmetric(
                             horizontal: AppSpacing.md,
@@ -364,43 +370,6 @@ class _SummaryRow extends StatelessWidget {
               : textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
         ),
       ],
-    );
-  }
-}
-
-/// السلة الفارغة: رسم + رسالة + زر لتصفح المنتجات.
-class _EmptyCart extends StatelessWidget {
-  const _EmptyCart();
-
-  @override
-  Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
-    final l10n = context.l10n;
-
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(AppSpacing.lg),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const IconBadge(icon: Icons.shopping_cart_outlined, size: 88),
-            const SizedBox(height: AppSpacing.lg),
-            Text(l10n.cartEmptyTitle, style: textTheme.titleLarge),
-            const SizedBox(height: AppSpacing.sm),
-            Text(
-              l10n.cartEmptyHint,
-              textAlign: TextAlign.center,
-              style:
-                  textTheme.bodyMedium?.copyWith(color: AppColors.textMuted),
-            ),
-            const SizedBox(height: AppSpacing.lg),
-            ElevatedButton(
-              onPressed: () => context.go(AppRoutes.home),
-              child: Text(l10n.browseProducts),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }

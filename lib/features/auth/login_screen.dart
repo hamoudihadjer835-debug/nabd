@@ -37,9 +37,8 @@ class _LoginScreenState extends State<LoginScreen> {
     return null;
   }
 
-  String? _validatePassword(String? value) {
+   String? _validatePassword(String? value) {
     if (value == null || value.isEmpty) return context.l10n.fieldRequired;
-    if (value.length < 6) return context.l10n.passwordTooShort;
     return null;
   }
 

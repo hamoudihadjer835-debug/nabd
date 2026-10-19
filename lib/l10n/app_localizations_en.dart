@@ -25,7 +25,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get passwordLabel => 'Password';
 
   @override
-  String get passwordHintSignup => 'At least 6 characters';
+  String get passwordHintSignup => 'At least 8 characters';
 
   @override
   String get forgotPassword => 'Forgot password?';
@@ -74,7 +74,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get invalidEmailOrPhone => 'Enter a valid email or phone number';
 
   @override
-  String get passwordTooShort => 'Password must be at least 6 characters';
+  String get passwordTooShort => 'Password must be at least 8 characters';
 
   @override
   String get nameRequired => 'Please enter your full name';
@@ -121,7 +121,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get resetSubtitle =>
-      'Choose a new password with at least 6 characters';
+      'Choose a new password with at least 8 characters, including a letter and a digit';
 
   @override
   String get newPasswordLabel => 'New password';
@@ -278,7 +278,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get noResults => 'No results found';
 
   @override
-  String get noResultsHint => 'Try different keywords';
+  String get noResultsHint => 'Try other keywords or change the filters';
 
   @override
   String resultsCount(int count) {
@@ -319,8 +319,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cartEmptyTitle => 'Your cart is empty';
 
   @override
-  String get cartEmptyHint =>
-      'Add medical supplies to your cart and they will show up here';
+  String get cartEmptyHint => 'Add medical products and they will show up here';
 
   @override
   String get browseProducts => 'Browse products';
@@ -442,4 +441,72 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get changePassword => 'Change password';
+
+  @override
+  String get newPasswordRequired => 'Enter the new password';
+
+  @override
+  String get passwordNeedsLetterAndDigit => 'Must contain a letter and a digit';
+
+  @override
+  String get passwordSameAsCurrent =>
+      'Choose a password different from the current one';
+
+  @override
+  String get passwordChanged => 'Password changed';
+
+  @override
+  String get currentPasswordLabel => 'Current password';
+
+  @override
+  String get confirmNewPasswordLabel => 'Confirm new password';
+
+  @override
+  String get currentPasswordWrong => 'Current password is incorrect';
+
+  @override
+  String get forgotCurrentPassword => 'Forgot your current password?';
+
+  @override
+  String get passwordStrengthLabel => 'Password strength';
+
+  @override
+  String get strengthWeak => 'Weak';
+
+  @override
+  String get strengthMedium => 'Medium';
+
+  @override
+  String get strengthStrong => 'Strong';
+
+  @override
+  String get ruleMinLength => 'At least 8 characters';
+
+  @override
+  String get ruleLetter => 'A letter';
+
+  @override
+  String get ruleDigit => 'A digit';
+
+  @override
+  String get genericError => 'Something went wrong. Please try again.';
+
+  @override
+  String get backToSearch => 'Back to search';
+
+  @override
+  String get retry => 'Try again';
+
+  @override
+  String get offlineTitle => 'No internet connection';
+
+  @override
+  String get offlineMessage => 'Check your connection and try again';
+
+  @override
+  String get errorTitle => 'Something went wrong';
+
+  @override
+  String get errorMessage =>
+      'We couldn’t complete the operation. Please try again.';
 }

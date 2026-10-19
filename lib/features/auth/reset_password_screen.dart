@@ -8,6 +8,7 @@ import '../../core/theme/app_dimens.dart';
 import '../../core/widgets/app_text_field.dart';
 import '../../core/widgets/auth_top_bar.dart';
 import '../../core/widgets/icon_badge.dart';
+import '../../core/utils/password_validation.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
   const ResetPasswordScreen({super.key});
@@ -30,11 +31,11 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
     super.dispose();
   }
 
-  String? _validateNew(String? value) {
-    if (value == null || value.isEmpty) return context.l10n.fieldRequired;
-    if (value.length < 6) return context.l10n.passwordTooShort;
-    return null;
-  }
+   String? _validateNew(String? value) => validateNewPassword(
+        context.l10n,
+        value,
+        emptyMessage: context.l10n.newPasswordRequired,
+      );
 
   String? _validateConfirm(String? value) {
     if (value == null || value.isEmpty) return context.l10n.fieldRequired;

@@ -28,7 +28,11 @@ class AppRoutes {
   static const String language = '/language';
     /// شاشة تعديل البيانات: ملء الشاشة بلا الشريط السفلي.
   static const String editProfile = '/edit-profile';
-
+    /// شاشة تغيير كلمة السر: ملء الشاشة بلا الشريط السفلي.
+  static const String changePassword = '/change-password';
+  /// مسارات معاينة مؤقتة لشاشتي لا اتصال وخطأ (نحيوهم بعد ربط الـ Backend).
+  static const String offlinePreview = '/preview/offline';
+  static const String errorPreview = '/preview/error';
   /// عنوان منتجات قسم معين، مثلا: /categories/c1
   static String categoryProducts(String categoryId) =>
       '$categories/$categoryId';

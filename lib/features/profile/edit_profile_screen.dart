@@ -311,7 +311,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                           ),
                           child: InkWell(
                             // الشاشة نبنيوها في الخطوة الجاية (4.16c)
-                            onTap: _comingSoon,
+                              onTap: () => context.push(AppRoutes.changePassword),
                             child: Padding(
                               padding: const EdgeInsets.all(AppSpacing.md),
                               child: Row(

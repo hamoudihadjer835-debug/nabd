@@ -11,6 +11,7 @@ import 'data/product_search.dart';
 import 'data/search_history.dart';
 import 'widgets/pill_button.dart';
 import 'widgets/product_card.dart';
+import '../../core/widgets/status_message.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -121,7 +122,14 @@ class _SearchScreenState extends State<SearchScreen> {
             Expanded(
               child: _submittedQuery == null
                   ? _Suggestions(onSelect: _runSearch)
-                  : _Results(query: _submittedQuery!),
+                  : _Results(
+                      query: _submittedQuery!,
+                      // "العودة للبحث": نمسحو النص ونرجعو للاقتراحات
+                      onBack: () {
+                        _controller.clear();
+                        setState(() => _submittedQuery = null);
+                      },
+                    ),
             ),
           ],
         ),
@@ -241,9 +249,10 @@ class _Suggestions extends StatelessWidget {
 
 /// حالة ما بعد البحث: حبات التصفية + عدد النتائج + الشبكة (أو رسالة فارغة).
 class _Results extends StatelessWidget {
-  const _Results({required this.query});
+  const _Results({required this.query, required this.onBack});
 
   final String query;
+  final VoidCallback onBack; // يرجعنا للاقتراحات
 
   @override
   Widget build(BuildContext context) {
@@ -290,32 +299,16 @@ class _Results extends StatelessWidget {
           ),
         ),
 
-        if (results.isEmpty)
+        
+                  if (results.isEmpty)
           SliverFillRemaining(
             hasScrollBody: false,
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.all(AppSpacing.lg),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const Icon(
-                      Icons.search_off_rounded,
-                      size: 56,
-                      color: AppColors.primary,
-                    ),
-                    const SizedBox(height: AppSpacing.md),
-                    Text(l10n.noResults, style: textTheme.titleLarge),
-                    const SizedBox(height: AppSpacing.sm),
-                    Text(
-                      l10n.noResultsHint,
-                      textAlign: TextAlign.center,
-                      style: textTheme.bodyMedium
-                          ?.copyWith(color: AppColors.textMuted),
-                    ),
-                  ],
-                ),
-              ),
+            child: StatusMessage(
+              icon: Icons.search_rounded,
+              title: l10n.noResults,
+              message: l10n.noResultsHint,
+              buttonLabel: l10n.backToSearch,
+              onPressed: onBack,
             ),
           )
         else

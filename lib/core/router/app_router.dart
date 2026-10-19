@@ -23,6 +23,8 @@ import '../widgets/main_shell.dart';
 import 'app_routes.dart';
 import '../../features/notifications/notifications_screen.dart';
 import '../../features/profile/edit_profile_screen.dart';
+import '../../features/profile/change_password_screen.dart';
+import '../../features/states/state_screens.dart';
 
 /// جدول التنقل: كل عنوان مربوط بشاشة.
 final GoRouter appRouter = GoRouter(
@@ -61,6 +63,15 @@ final GoRouter appRouter = GoRouter(
     ),
 
     // ---------- شاشات ملء الشاشة (بلا الشريط السفلي) ----------
+        // معاينة مؤقتة لحالتي لا اتصال وخطأ
+    GoRoute(
+      path: AppRoutes.offlinePreview,
+      builder: (context, state) => const OfflineScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.errorPreview,
+      builder: (context, state) => const ErrorScreen(),
+    ),
     GoRoute(
       path: AppRoutes.productDetailsPattern,
       builder: (context, state) => ProductDetailsScreen(
@@ -75,7 +86,10 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.editProfile,
       builder: (context, state) => const EditProfileScreen(),
     ),
-
+           GoRoute(
+      path: AppRoutes.changePassword,
+      builder: (context, state) => const ChangePasswordScreen(),
+    ),
     // ---------- التطبيق الرئيسي: 5 تبويبات ----------
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) =>

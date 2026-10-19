@@ -26,7 +26,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get passwordLabel => 'Mot de passe';
 
   @override
-  String get passwordHintSignup => '6 caractères minimum';
+  String get passwordHintSignup => '8 caractères minimum';
 
   @override
   String get forgotPassword => 'Mot de passe oublié ?';
@@ -77,7 +77,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get passwordTooShort =>
-      'Le mot de passe doit contenir au moins 6 caractères';
+      'Le mot de passe doit contenir au moins 8 caractères';
 
   @override
   String get nameRequired => 'Veuillez saisir votre nom complet';
@@ -125,7 +125,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get resetSubtitle =>
-      'Choisissez un nouveau mot de passe d’au moins 6 caractères';
+      'Choisissez un nouveau mot de passe d’au moins 8 caractères, dont une lettre et un chiffre';
 
   @override
   String get newPasswordLabel => 'Nouveau mot de passe';
@@ -284,7 +284,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get noResults => 'Aucun résultat';
 
   @override
-  String get noResultsHint => 'Essayez d’autres mots-clés';
+  String get noResultsHint => 'Essayez d’autres mots ou modifiez les filtres';
 
   @override
   String resultsCount(int count) {
@@ -325,8 +325,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get cartEmptyTitle => 'Votre panier est vide';
 
   @override
-  String get cartEmptyHint =>
-      'Ajoutez des fournitures médicales à votre panier, elles apparaîtront ici';
+  String get cartEmptyHint => 'Ajoutez des produits médicaux pour les voir ici';
 
   @override
   String get browseProducts => 'Parcourir les produits';
@@ -448,4 +447,73 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get changePassword => 'Changer le mot de passe';
+
+  @override
+  String get newPasswordRequired => 'Saisissez le nouveau mot de passe';
+
+  @override
+  String get passwordNeedsLetterAndDigit =>
+      'Doit contenir une lettre et un chiffre';
+
+  @override
+  String get passwordSameAsCurrent =>
+      'Choisissez un mot de passe différent de l’actuel';
+
+  @override
+  String get passwordChanged => 'Mot de passe modifié';
+
+  @override
+  String get currentPasswordLabel => 'Mot de passe actuel';
+
+  @override
+  String get confirmNewPasswordLabel => 'Confirmer le nouveau mot de passe';
+
+  @override
+  String get currentPasswordWrong => 'Le mot de passe actuel est incorrect';
+
+  @override
+  String get forgotCurrentPassword => 'Mot de passe actuel oublié ?';
+
+  @override
+  String get passwordStrengthLabel => 'Force du mot de passe';
+
+  @override
+  String get strengthWeak => 'Faible';
+
+  @override
+  String get strengthMedium => 'Moyenne';
+
+  @override
+  String get strengthStrong => 'Forte';
+
+  @override
+  String get ruleMinLength => 'Au moins 8 caractères';
+
+  @override
+  String get ruleLetter => 'Une lettre';
+
+  @override
+  String get ruleDigit => 'Un chiffre';
+
+  @override
+  String get genericError => 'Une erreur s’est produite. Veuillez réessayer.';
+
+  @override
+  String get backToSearch => 'Retour à la recherche';
+
+  @override
+  String get retry => 'Réessayer';
+
+  @override
+  String get offlineTitle => 'Pas de connexion Internet';
+
+  @override
+  String get offlineMessage => 'Vérifiez votre connexion et réessayez';
+
+  @override
+  String get errorTitle => 'Une erreur s’est produite';
+
+  @override
+  String get errorMessage =>
+      'Nous n’avons pas pu terminer l’opération. Veuillez réessayer.';
 }
