@@ -44,4 +44,7 @@ class AppRoutes {
   static String product(String productId) => '/product/$productId';
     /// شاشة الإشعارات: مسار فرعي داخل تبويب Profile.
   static const String notifications = '/profile/notifications';
+    /// شاشتا العناوين: ملء الشاشة بلا الشريط السفلي.
+  static const String addresses = '/addresses';
+  static const String addAddress = '/add-address';
 }

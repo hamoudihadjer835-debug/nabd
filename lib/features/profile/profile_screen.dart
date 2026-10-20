@@ -83,7 +83,7 @@ class ProfileScreen extends StatelessWidget {
       _MenuItem(
         icon: Icons.location_on_outlined,
         label: l10n.menuAddresses,
-        onTap: () => _comingSoon(context),
+                onTap: () => context.push(AppRoutes.addresses),
       ),
       _MenuItem(
         icon: Icons.favorite_border_rounded,

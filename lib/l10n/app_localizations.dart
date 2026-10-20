@@ -1023,6 +1023,114 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'We couldn’t complete the operation. Please try again.'**
   String get errorMessage;
+
+  /// No description provided for @addNewAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Add new address'**
+  String get addNewAddress;
+
+  /// No description provided for @addAddressTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Add address'**
+  String get addAddressTitle;
+
+  /// No description provided for @addressNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Address name'**
+  String get addressNameLabel;
+
+  /// No description provided for @addressNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. Home'**
+  String get addressNameHint;
+
+  /// No description provided for @wilayaLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Wilaya (province)'**
+  String get wilayaLabel;
+
+  /// No description provided for @wilayaHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Select wilaya'**
+  String get wilayaHint;
+
+  /// No description provided for @communeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Commune (municipality)'**
+  String get communeLabel;
+
+  /// No description provided for @communeHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Select commune'**
+  String get communeHint;
+
+  /// No description provided for @addressDetailsLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Detailed address'**
+  String get addressDetailsLabel;
+
+  /// No description provided for @addressDetailsHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Street, neighborhood, building number'**
+  String get addressDetailsHint;
+
+  /// No description provided for @setAsDefault.
+  ///
+  /// In en, this message translates to:
+  /// **'Set as default address'**
+  String get setAsDefault;
+
+  /// No description provided for @saveAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Save address'**
+  String get saveAddress;
+
+  /// No description provided for @defaultBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'Default'**
+  String get defaultBadge;
+
+  /// No description provided for @addressSavedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Address saved'**
+  String get addressSavedMessage;
+
+  /// No description provided for @selectWilayaError.
+  ///
+  /// In en, this message translates to:
+  /// **'Select a wilaya'**
+  String get selectWilayaError;
+
+  /// No description provided for @selectCommuneError.
+  ///
+  /// In en, this message translates to:
+  /// **'Select a commune'**
+  String get selectCommuneError;
+
+  /// No description provided for @addressDetailsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the detailed address'**
+  String get addressDetailsRequired;
+
+  /// No description provided for @searchOptionHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search...'**
+  String get searchOptionHint;
 }
 
 class _AppLocalizationsDelegate

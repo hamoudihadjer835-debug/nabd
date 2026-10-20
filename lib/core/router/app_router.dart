@@ -25,6 +25,8 @@ import '../../features/notifications/notifications_screen.dart';
 import '../../features/profile/edit_profile_screen.dart';
 import '../../features/profile/change_password_screen.dart';
 import '../../features/states/state_screens.dart';
+import '../../features/addresses/add_address_screen.dart';
+import '../../features/addresses/addresses_screen.dart';
 
 /// جدول التنقل: كل عنوان مربوط بشاشة.
 final GoRouter appRouter = GoRouter(
@@ -71,6 +73,14 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: AppRoutes.errorPreview,
       builder: (context, state) => const ErrorScreen(),
+    ),
+        GoRoute(
+      path: AppRoutes.addresses,
+      builder: (context, state) => const AddressesScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.addAddress,
+      builder: (context, state) => const AddAddressScreen(),
     ),
     GoRoute(
       path: AppRoutes.productDetailsPattern,

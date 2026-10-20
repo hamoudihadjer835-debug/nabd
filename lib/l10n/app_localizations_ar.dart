@@ -512,4 +512,58 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get errorMessage => 'لم نتمكن من إكمال العملية. حاول مرة أخرى.';
+
+  @override
+  String get addNewAddress => 'إضافة عنوان جديد';
+
+  @override
+  String get addAddressTitle => 'إضافة عنوان';
+
+  @override
+  String get addressNameLabel => 'اسم العنوان';
+
+  @override
+  String get addressNameHint => 'مثال: المنزل';
+
+  @override
+  String get wilayaLabel => 'الولاية';
+
+  @override
+  String get wilayaHint => 'اختر الولاية';
+
+  @override
+  String get communeLabel => 'البلدية';
+
+  @override
+  String get communeHint => 'اختر البلدية';
+
+  @override
+  String get addressDetailsLabel => 'العنوان بالتفصيل';
+
+  @override
+  String get addressDetailsHint => 'الشارع، الحي، رقم البناية';
+
+  @override
+  String get setAsDefault => 'تعيين كعنوان افتراضي';
+
+  @override
+  String get saveAddress => 'حفظ العنوان';
+
+  @override
+  String get defaultBadge => 'افتراضي';
+
+  @override
+  String get addressSavedMessage => 'تم حفظ العنوان';
+
+  @override
+  String get selectWilayaError => 'اختر الولاية';
+
+  @override
+  String get selectCommuneError => 'اختر البلدية';
+
+  @override
+  String get addressDetailsRequired => 'أدخل العنوان بالتفصيل';
+
+  @override
+  String get searchOptionHint => 'ابحث...';
 }

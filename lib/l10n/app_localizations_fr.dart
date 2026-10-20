@@ -516,4 +516,58 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get errorMessage =>
       'Nous n’avons pas pu terminer l’opération. Veuillez réessayer.';
+
+  @override
+  String get addNewAddress => 'Ajouter une nouvelle adresse';
+
+  @override
+  String get addAddressTitle => 'Ajouter une adresse';
+
+  @override
+  String get addressNameLabel => 'Nom de l’adresse';
+
+  @override
+  String get addressNameHint => 'ex. Domicile';
+
+  @override
+  String get wilayaLabel => 'Wilaya';
+
+  @override
+  String get wilayaHint => 'Choisir la wilaya';
+
+  @override
+  String get communeLabel => 'Commune';
+
+  @override
+  String get communeHint => 'Choisir la commune';
+
+  @override
+  String get addressDetailsLabel => 'Adresse détaillée';
+
+  @override
+  String get addressDetailsHint => 'Rue, quartier, numéro du bâtiment';
+
+  @override
+  String get setAsDefault => 'Définir comme adresse par défaut';
+
+  @override
+  String get saveAddress => 'Enregistrer l’adresse';
+
+  @override
+  String get defaultBadge => 'Par défaut';
+
+  @override
+  String get addressSavedMessage => 'Adresse enregistrée';
+
+  @override
+  String get selectWilayaError => 'Choisissez une wilaya';
+
+  @override
+  String get selectCommuneError => 'Choisissez une commune';
+
+  @override
+  String get addressDetailsRequired => 'Saisissez l’adresse détaillée';
+
+  @override
+  String get searchOptionHint => 'Rechercher...';
 }
