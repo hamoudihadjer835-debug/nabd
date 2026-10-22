@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 import 'core/localization/locale_controller.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
+import 'features/addresses/data/geo_repository.dart';
 import 'l10n/app_localizations.dart';
 
-void main() {
+Future<void> main() async {
+  // ضروري قبل ما نقراو ملف من assets قبل runApp
+  WidgetsFlutterBinding.ensureInitialized();
+  await geoRepository.load(); // نحملو الولايات والبلديات
+
   runApp(const NabdApp());
 }
 

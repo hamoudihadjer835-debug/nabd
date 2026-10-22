@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/localization/l10n_extension.dart';
+import '../../core/models/localized_text.dart';
 import '../../core/router/app_routes.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_dimens.dart';
@@ -11,7 +12,7 @@ import '../../core/widgets/app_text_field.dart';
 import '../../core/widgets/circle_back_button.dart';
 import '../../core/widgets/picker_field.dart';
 import 'addresses_controller.dart';
-import 'data/mock_geo.dart';
+import 'data/geo_repository.dart';
 import 'models/address.dart';
 import 'models/algeria_geo.dart';
 
@@ -35,8 +36,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
   /// بعد أول محاولة حفظ نعرضو أخطاء الولاية والبلدية.
   bool _submitted = false;
 
-  Wilaya? get _wilaya =>
-      mockWilayas.where((w) => w.id == _wilayaId).firstOrNull;
+  Wilaya? get _wilaya => geoRepository.wilayaById(_wilayaId ?? '');
 
   Commune? get _commune =>
       _wilaya?.communes.where((c) => c.id == _communeId).firstOrNull;
@@ -92,7 +92,8 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
       context,
       title: title,
       options: [
-        for (final w in mockWilayas) PickerOption(w.id, w.name.of(locale)),
+        for (final w in geoRepository.wilayas)
+          PickerOption(w.id, w.name.of(locale)),
       ],
     );
 
@@ -110,12 +111,15 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
     final locale = Localizations.localeOf(context);
     final title = context.l10n.communeLabel;
 
+    // نرتبو البلديات أبجديا حسب لغة التطبيق
+    final options = [
+      for (final c in wilaya.communes) PickerOption(c.id, c.name.of(locale)),
+    ]..sort((a, b) => a.label.compareTo(b.label));
+
     final picked = await showPickerSheet<String>(
       context,
       title: title,
-      options: [
-        for (final c in wilaya.communes) PickerOption(c.id, c.name.of(locale)),
-      ],
+      options: options,
     );
 
     if (!mounted || picked == null) return;
@@ -132,10 +136,11 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
     addressesController.add(
       Address(
         id: addressesController.nextId(),
-        label: _labelController.text.trim(),
+        // ما كتبو المستخدم يتحفظ كما هو (ما يتترجمش)
+        label: LocalizedText.same(_labelController.text.trim()),
         wilayaId: _wilayaId!,
         communeId: _communeId!,
-        details: _detailsController.text.trim(),
+        details: LocalizedText.same(_detailsController.text.trim()),
         phone: _phoneDigits,
       ),
       makeDefault: _isDefault,

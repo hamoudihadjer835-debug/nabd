@@ -135,7 +135,7 @@ class _AddressCard extends StatelessWidget {
                       children: [
                         Flexible(
                           child: Text(
-                            address.label,
+                            address.label.of(locale),
                             style: textTheme.bodyLarge
                                 ?.copyWith(fontWeight: FontWeight.w700),
                           ),

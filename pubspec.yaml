@@ -23,6 +23,9 @@ dev_dependencies:
 flutter:
   generate: true
   uses-material-design: true
+    
+  assets:
+    - assets/data/algeria_geo.json
 
   fonts:
     - family: Cairo

@@ -1,3 +1,5 @@
+import '../../../core/models/localized_text.dart';
+
 /// عنوان توصيل واحد.
 class Address {
   const Address({
@@ -10,9 +12,9 @@ class Address {
   });
 
   final String id;
-  final String label; // الاسم لي كتبو المستخدم (مثلا: المنزل)
+  final LocalizedText label; // اسم العنوان (مثلا: المنزل)
   final String wilayaId;
   final String communeId;
-  final String details; // الشارع، الحي، رقم البناية
+  final LocalizedText details; // الشارع، الحي، رقم البناية
   final String phone; // أرقام صافية
 }

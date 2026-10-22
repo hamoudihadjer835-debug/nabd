@@ -4,6 +4,12 @@ import 'package:flutter/widgets.dart';
 class LocalizedText {
   const LocalizedText({required this.ar, required this.en, required this.fr});
 
+  /// نص واحد لكل اللغات (مثلا اسم كتبو المستخدم بنفسو، وما يتترجمش).
+  const LocalizedText.same(String value)
+      : ar = value,
+        en = value,
+        fr = value;
+
   final String ar;
   final String en;
   final String fr;
