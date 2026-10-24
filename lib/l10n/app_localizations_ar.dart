@@ -566,4 +566,45 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get searchOptionHint => 'ابحث...';
+
+  @override
+  String get checkoutTitle => 'إتمام الطلب';
+
+  @override
+  String get deliveryAddressTitle => 'عنوان التوصيل';
+
+  @override
+  String get deliveryMethodTitle => 'طريقة التوصيل';
+
+  @override
+  String get paymentMethodTitle => 'طريقة الدفع';
+
+  @override
+  String get changeAction => 'تغيير';
+
+  @override
+  String get confirmOrder => 'تأكيد الطلب';
+
+  @override
+  String get noAddressYet => 'لا يوجد عنوان توصيل بعد';
+
+  @override
+  String get paymentInfoBanner =>
+      'طرق الدفع المتاحة تُحدَّد لاحقًا. الخيارات التالية مؤقتة.';
+
+  @override
+  String get orderReceivedTitle => 'تم استلام طلبك';
+
+  @override
+  String get orderReceivedMessage =>
+      'شكرًا لثقتك بنبض. سنُعلمك عند تحديث حالة طلبك.';
+
+  @override
+  String get orderNumberLabel => 'رقم الطلب';
+
+  @override
+  String get trackOrder => 'تتبع الطلب';
+
+  @override
+  String get backToHome => 'العودة للرئيسية';
 }

@@ -47,4 +47,15 @@ class AppRoutes {
     /// شاشتا العناوين: ملء الشاشة بلا الشريط السفلي.
   static const String addresses = '/addresses';
   static const String addAddress = '/add-address';
+    /// مسار الطلب: شاشات ملء الشاشة بلا الشريط السفلي.
+  static const String checkout = '/checkout';
+  static const String payment = '/payment';
+
+  /// نمط مسار تأكيد الطلب (يستعمل في الراوتر).
+  static const String orderConfirmationPattern =
+      '/order-confirmation/:orderId';
+
+  /// عنوان تأكيد طلب معين، مثلا: /order-confirmation/NBD-10486
+  static String orderConfirmation(String orderId) =>
+      '/order-confirmation/$orderId';
 }

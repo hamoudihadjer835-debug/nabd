@@ -570,4 +570,45 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get searchOptionHint => 'Rechercher...';
+
+  @override
+  String get checkoutTitle => 'Finaliser la commande';
+
+  @override
+  String get deliveryAddressTitle => 'Adresse de livraison';
+
+  @override
+  String get deliveryMethodTitle => 'Mode de livraison';
+
+  @override
+  String get paymentMethodTitle => 'Mode de paiement';
+
+  @override
+  String get changeAction => 'Modifier';
+
+  @override
+  String get confirmOrder => 'Confirmer la commande';
+
+  @override
+  String get noAddressYet => 'Aucune adresse de livraison';
+
+  @override
+  String get paymentInfoBanner =>
+      'Les modes de paiement disponibles seront définis ultérieurement. Les options ci-dessous sont temporaires.';
+
+  @override
+  String get orderReceivedTitle => 'Votre commande a été reçue';
+
+  @override
+  String get orderReceivedMessage =>
+      'Merci de votre confiance. Nous vous informerons de l’évolution de votre commande.';
+
+  @override
+  String get orderNumberLabel => 'Numéro de commande';
+
+  @override
+  String get trackOrder => 'Suivre la commande';
+
+  @override
+  String get backToHome => 'Retour à l’accueil';
 }

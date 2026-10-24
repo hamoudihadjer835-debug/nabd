@@ -563,4 +563,45 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get searchOptionHint => 'Search...';
+
+  @override
+  String get checkoutTitle => 'Checkout';
+
+  @override
+  String get deliveryAddressTitle => 'Delivery address';
+
+  @override
+  String get deliveryMethodTitle => 'Delivery method';
+
+  @override
+  String get paymentMethodTitle => 'Payment method';
+
+  @override
+  String get changeAction => 'Change';
+
+  @override
+  String get confirmOrder => 'Confirm order';
+
+  @override
+  String get noAddressYet => 'No delivery address yet';
+
+  @override
+  String get paymentInfoBanner =>
+      'Available payment methods will be set later. The options below are temporary.';
+
+  @override
+  String get orderReceivedTitle => 'Your order has been received';
+
+  @override
+  String get orderReceivedMessage =>
+      'Thank you for trusting Nabd. We’ll let you know when your order status changes.';
+
+  @override
+  String get orderNumberLabel => 'Order number';
+
+  @override
+  String get trackOrder => 'Track order';
+
+  @override
+  String get backToHome => 'Back to home';
 }

@@ -27,6 +27,9 @@ import '../../features/profile/change_password_screen.dart';
 import '../../features/states/state_screens.dart';
 import '../../features/addresses/add_address_screen.dart';
 import '../../features/addresses/addresses_screen.dart';
+import '../../features/checkout/checkout_screen.dart';
+import '../../features/checkout/payment_screen.dart';
+import '../../features/orders/order_confirmation_screen.dart';
 
 /// جدول التنقل: كل عنوان مربوط بشاشة.
 final GoRouter appRouter = GoRouter(
@@ -81,6 +84,21 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: AppRoutes.addAddress,
       builder: (context, state) => const AddAddressScreen(),
+    ),
+        // ---------- مسار الطلب ----------
+    GoRoute(
+      path: AppRoutes.checkout,
+      builder: (context, state) => const CheckoutScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.payment,
+      builder: (context, state) => const PaymentScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.orderConfirmationPattern,
+      builder: (context, state) => OrderConfirmationScreen(
+        orderId: state.pathParameters['orderId'] ?? '',
+      ),
     ),
     GoRoute(
       path: AppRoutes.productDetailsPattern,

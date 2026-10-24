@@ -171,5 +171,18 @@
   "selectWilayaError": "اختر الولاية",
   "selectCommuneError": "اختر البلدية",
   "addressDetailsRequired": "أدخل العنوان بالتفصيل",
-  "searchOptionHint": "ابحث..."
+    "searchOptionHint": "ابحث...",
+  "checkoutTitle": "إتمام الطلب",
+  "deliveryAddressTitle": "عنوان التوصيل",
+  "deliveryMethodTitle": "طريقة التوصيل",
+  "paymentMethodTitle": "طريقة الدفع",
+  "changeAction": "تغيير",
+  "confirmOrder": "تأكيد الطلب",
+  "noAddressYet": "لا يوجد عنوان توصيل بعد",
+  "paymentInfoBanner": "طرق الدفع المتاحة تُحدَّد لاحقًا. الخيارات التالية مؤقتة.",
+  "orderReceivedTitle": "تم استلام طلبك",
+  "orderReceivedMessage": "شكرًا لثقتك بنبض. سنُعلمك عند تحديث حالة طلبك.",
+  "orderNumberLabel": "رقم الطلب",
+  "trackOrder": "تتبع الطلب",
+  "backToHome": "العودة للرئيسية"
 }

@@ -1131,6 +1131,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Search...'**
   String get searchOptionHint;
+
+  /// No description provided for @checkoutTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Checkout'**
+  String get checkoutTitle;
+
+  /// No description provided for @deliveryAddressTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery address'**
+  String get deliveryAddressTitle;
+
+  /// No description provided for @deliveryMethodTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery method'**
+  String get deliveryMethodTitle;
+
+  /// No description provided for @paymentMethodTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment method'**
+  String get paymentMethodTitle;
+
+  /// No description provided for @changeAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Change'**
+  String get changeAction;
+
+  /// No description provided for @confirmOrder.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm order'**
+  String get confirmOrder;
+
+  /// No description provided for @noAddressYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No delivery address yet'**
+  String get noAddressYet;
+
+  /// No description provided for @paymentInfoBanner.
+  ///
+  /// In en, this message translates to:
+  /// **'Available payment methods will be set later. The options below are temporary.'**
+  String get paymentInfoBanner;
+
+  /// No description provided for @orderReceivedTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your order has been received'**
+  String get orderReceivedTitle;
+
+  /// No description provided for @orderReceivedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Thank you for trusting Nabd. We’ll let you know when your order status changes.'**
+  String get orderReceivedMessage;
+
+  /// No description provided for @orderNumberLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Order number'**
+  String get orderNumberLabel;
+
+  /// No description provided for @trackOrder.
+  ///
+  /// In en, this message translates to:
+  /// **'Track order'**
+  String get trackOrder;
+
+  /// No description provided for @backToHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to home'**
+  String get backToHome;
 }
 
 class _AppLocalizationsDelegate

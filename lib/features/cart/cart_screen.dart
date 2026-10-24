@@ -324,12 +324,7 @@ class _Summary extends StatelessWidget {
             width: double.infinity,
             height: 52,
             child: ElevatedButton(
-              // مؤقت: شاشة الدفع (Checkout) نبنيوها في مسار الطلب
-              onPressed: () {
-                ScaffoldMessenger.of(context)
-                  ..hideCurrentSnackBar()
-                  ..showSnackBar(SnackBar(content: Text(l10n.comingSoon)));
-              },
+              onPressed: () => context.push(AppRoutes.checkout),
               child: Text(l10n.proceedToPayment),
             ),
           ),

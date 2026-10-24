@@ -171,5 +171,18 @@
   "selectWilayaError": "Choisissez une wilaya",
   "selectCommuneError": "Choisissez une commune",
   "addressDetailsRequired": "Saisissez l’adresse détaillée",
-  "searchOptionHint": "Rechercher..."
+    "searchOptionHint": "Rechercher...",
+  "checkoutTitle": "Finaliser la commande",
+  "deliveryAddressTitle": "Adresse de livraison",
+  "deliveryMethodTitle": "Mode de livraison",
+  "paymentMethodTitle": "Mode de paiement",
+  "changeAction": "Modifier",
+  "confirmOrder": "Confirmer la commande",
+  "noAddressYet": "Aucune adresse de livraison",
+  "paymentInfoBanner": "Les modes de paiement disponibles seront définis ultérieurement. Les options ci-dessous sont temporaires.",
+  "orderReceivedTitle": "Votre commande a été reçue",
+  "orderReceivedMessage": "Merci de votre confiance. Nous vous informerons de l’évolution de votre commande.",
+  "orderNumberLabel": "Numéro de commande",
+  "trackOrder": "Suivre la commande",
+  "backToHome": "Retour à l’accueil"
 }

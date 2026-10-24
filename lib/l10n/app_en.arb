@@ -206,5 +206,18 @@
   "selectWilayaError": "Select a wilaya",
   "selectCommuneError": "Select a commune",
   "addressDetailsRequired": "Enter the detailed address",
-  "searchOptionHint": "Search..."
+    "searchOptionHint": "Search...",
+  "checkoutTitle": "Checkout",
+  "deliveryAddressTitle": "Delivery address",
+  "deliveryMethodTitle": "Delivery method",
+  "paymentMethodTitle": "Payment method",
+  "changeAction": "Change",
+  "confirmOrder": "Confirm order",
+  "noAddressYet": "No delivery address yet",
+  "paymentInfoBanner": "Available payment methods will be set later. The options below are temporary.",
+  "orderReceivedTitle": "Your order has been received",
+  "orderReceivedMessage": "Thank you for trusting Nabd. We’ll let you know when your order status changes.",
+  "orderNumberLabel": "Order number",
+  "trackOrder": "Track order",
+  "backToHome": "Back to home"
 }
