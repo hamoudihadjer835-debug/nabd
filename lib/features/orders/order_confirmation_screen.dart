@@ -24,7 +24,7 @@ class OrderConfirmationScreen extends StatelessWidget {
       return Scaffold(
         body: SafeArea(
           child: StatusMessage(
-            icon: Icons.error_outline_rounded,
+            icon: Icons.warning_amber_rounded,
             isError: true,
             title: l10n.errorTitle,
             message: l10n.errorMessage,

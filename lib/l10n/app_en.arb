@@ -219,5 +219,30 @@
   "orderReceivedMessage": "Thank you for trusting Nabd. We’ll let you know when your order status changes.",
   "orderNumberLabel": "Order number",
   "trackOrder": "Track order",
-  "backToHome": "Back to home"
+    "backToHome": "Back to home",
+  "myOrdersTitle": "My orders",
+  "ordersCurrent": "Current",
+  "ordersPast": "Past",
+  "detailsAction": "Details",
+  "orderStatusPending": "Pending confirmation",
+  "orderStatusPreparing": "Preparing",
+  "orderStatusShipped": "Shipped",
+  "orderStatusDelivered": "Delivered",
+  "orderStatusCancelled": "Cancelled",
+  "orderDetailsTitle": "Order details",
+  "orderStatusSection": "Order status",
+  "stepConfirmed": "Order confirmed",
+  "awaitingUpdate": "Awaiting update",
+  "productsTitle": "Products",
+  "quantityLabel": "Quantity: {count}",
+  "@quantityLabel": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "ordersEmptyTitle": "No orders yet",
+  "ordersEmptyHint": "Your orders will appear here once you place one",
+  "ordersPastEmptyHint": "Delivered and cancelled orders will appear here"
 }

@@ -611,4 +611,62 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get backToHome => 'Retour à l’accueil';
+
+  @override
+  String get myOrdersTitle => 'Mes commandes';
+
+  @override
+  String get ordersCurrent => 'En cours';
+
+  @override
+  String get ordersPast => 'Passées';
+
+  @override
+  String get detailsAction => 'Détails';
+
+  @override
+  String get orderStatusPending => 'En attente de confirmation';
+
+  @override
+  String get orderStatusPreparing => 'En préparation';
+
+  @override
+  String get orderStatusShipped => 'Expédiée';
+
+  @override
+  String get orderStatusDelivered => 'Livrée';
+
+  @override
+  String get orderStatusCancelled => 'Annulée';
+
+  @override
+  String get orderDetailsTitle => 'Détails de la commande';
+
+  @override
+  String get orderStatusSection => 'Statut de la commande';
+
+  @override
+  String get stepConfirmed => 'Commande confirmée';
+
+  @override
+  String get awaitingUpdate => 'En attente de mise à jour';
+
+  @override
+  String get productsTitle => 'Produits';
+
+  @override
+  String quantityLabel(int count) {
+    return 'Quantité : $count';
+  }
+
+  @override
+  String get ordersEmptyTitle => 'Aucune commande pour le moment';
+
+  @override
+  String get ordersEmptyHint =>
+      'Vos commandes apparaîtront ici après votre première commande';
+
+  @override
+  String get ordersPastEmptyHint =>
+      'Les commandes livrées et annulées apparaîtront ici';
 }

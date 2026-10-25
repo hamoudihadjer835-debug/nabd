@@ -604,4 +604,62 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backToHome => 'Back to home';
+
+  @override
+  String get myOrdersTitle => 'My orders';
+
+  @override
+  String get ordersCurrent => 'Current';
+
+  @override
+  String get ordersPast => 'Past';
+
+  @override
+  String get detailsAction => 'Details';
+
+  @override
+  String get orderStatusPending => 'Pending confirmation';
+
+  @override
+  String get orderStatusPreparing => 'Preparing';
+
+  @override
+  String get orderStatusShipped => 'Shipped';
+
+  @override
+  String get orderStatusDelivered => 'Delivered';
+
+  @override
+  String get orderStatusCancelled => 'Cancelled';
+
+  @override
+  String get orderDetailsTitle => 'Order details';
+
+  @override
+  String get orderStatusSection => 'Order status';
+
+  @override
+  String get stepConfirmed => 'Order confirmed';
+
+  @override
+  String get awaitingUpdate => 'Awaiting update';
+
+  @override
+  String get productsTitle => 'Products';
+
+  @override
+  String quantityLabel(int count) {
+    return 'Quantity: $count';
+  }
+
+  @override
+  String get ordersEmptyTitle => 'No orders yet';
+
+  @override
+  String get ordersEmptyHint =>
+      'Your orders will appear here once you place one';
+
+  @override
+  String get ordersPastEmptyHint =>
+      'Delivered and cancelled orders will appear here';
 }

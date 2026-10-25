@@ -34,6 +34,7 @@ class Order {
     required this.paymentMethod,
     required this.subtotal,
     required this.deliveryFee,
+    this.stepTimes = const {},
   });
 
   final String id;
@@ -47,5 +48,15 @@ class Order {
   final int subtotal;
   final int deliveryFee;
 
+  /// وقت وصول الطلب لكل خطوة في الخط الزمني:
+  /// 0 تأكيد، 1 تحضير، 2 شحن، 3 تسليم. (الخطوة غير الموجودة = لسا ما وصلتش)
+  final Map<int, DateTime> stepTimes;
+
   int get total => subtotal + deliveryFee;
+
+  /// الطلبات "الحالية" (ماشي منتهية).
+  bool get isCurrent =>
+      status == OrderStatus.pendingConfirmation ||
+      status == OrderStatus.preparing ||
+      status == OrderStatus.shipped;
 }

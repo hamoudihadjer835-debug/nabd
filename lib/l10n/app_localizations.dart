@@ -1209,6 +1209,114 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Back to home'**
   String get backToHome;
+
+  /// No description provided for @myOrdersTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'My orders'**
+  String get myOrdersTitle;
+
+  /// No description provided for @ordersCurrent.
+  ///
+  /// In en, this message translates to:
+  /// **'Current'**
+  String get ordersCurrent;
+
+  /// No description provided for @ordersPast.
+  ///
+  /// In en, this message translates to:
+  /// **'Past'**
+  String get ordersPast;
+
+  /// No description provided for @detailsAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Details'**
+  String get detailsAction;
+
+  /// No description provided for @orderStatusPending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending confirmation'**
+  String get orderStatusPending;
+
+  /// No description provided for @orderStatusPreparing.
+  ///
+  /// In en, this message translates to:
+  /// **'Preparing'**
+  String get orderStatusPreparing;
+
+  /// No description provided for @orderStatusShipped.
+  ///
+  /// In en, this message translates to:
+  /// **'Shipped'**
+  String get orderStatusShipped;
+
+  /// No description provided for @orderStatusDelivered.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivered'**
+  String get orderStatusDelivered;
+
+  /// No description provided for @orderStatusCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancelled'**
+  String get orderStatusCancelled;
+
+  /// No description provided for @orderDetailsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Order details'**
+  String get orderDetailsTitle;
+
+  /// No description provided for @orderStatusSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Order status'**
+  String get orderStatusSection;
+
+  /// No description provided for @stepConfirmed.
+  ///
+  /// In en, this message translates to:
+  /// **'Order confirmed'**
+  String get stepConfirmed;
+
+  /// No description provided for @awaitingUpdate.
+  ///
+  /// In en, this message translates to:
+  /// **'Awaiting update'**
+  String get awaitingUpdate;
+
+  /// No description provided for @productsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Products'**
+  String get productsTitle;
+
+  /// No description provided for @quantityLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Quantity: {count}'**
+  String quantityLabel(int count);
+
+  /// No description provided for @ordersEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No orders yet'**
+  String get ordersEmptyTitle;
+
+  /// No description provided for @ordersEmptyHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Your orders will appear here once you place one'**
+  String get ordersEmptyHint;
+
+  /// No description provided for @ordersPastEmptyHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivered and cancelled orders will appear here'**
+  String get ordersPastEmptyHint;
 }
 
 class _AppLocalizationsDelegate

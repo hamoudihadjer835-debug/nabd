@@ -607,4 +607,60 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get backToHome => 'العودة للرئيسية';
+
+  @override
+  String get myOrdersTitle => 'طلباتي';
+
+  @override
+  String get ordersCurrent => 'الحالية';
+
+  @override
+  String get ordersPast => 'السابقة';
+
+  @override
+  String get detailsAction => 'التفاصيل';
+
+  @override
+  String get orderStatusPending => 'قيد التأكيد';
+
+  @override
+  String get orderStatusPreparing => 'قيد التحضير';
+
+  @override
+  String get orderStatusShipped => 'تم الشحن';
+
+  @override
+  String get orderStatusDelivered => 'تم التسليم';
+
+  @override
+  String get orderStatusCancelled => 'أُلغي';
+
+  @override
+  String get orderDetailsTitle => 'تفاصيل الطلب';
+
+  @override
+  String get orderStatusSection => 'حالة الطلب';
+
+  @override
+  String get stepConfirmed => 'تم تأكيد الطلب';
+
+  @override
+  String get awaitingUpdate => 'في انتظار التحديث';
+
+  @override
+  String get productsTitle => 'المنتجات';
+
+  @override
+  String quantityLabel(int count) {
+    return 'الكمية: $count';
+  }
+
+  @override
+  String get ordersEmptyTitle => 'لا توجد طلبات بعد';
+
+  @override
+  String get ordersEmptyHint => 'ستظهر طلباتك هنا بعد أول طلب';
+
+  @override
+  String get ordersPastEmptyHint => 'ستظهر هنا الطلبات المسلّمة والملغاة';
 }

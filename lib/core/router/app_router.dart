@@ -1,14 +1,23 @@
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/addresses/add_address_screen.dart';
+import '../../features/addresses/addresses_screen.dart';
 import '../../features/auth/forgot_password_screen.dart';
 import '../../features/auth/login_screen.dart';
 import '../../features/auth/reset_password_screen.dart';
 import '../../features/auth/sign_up_screen.dart';
 import '../../features/auth/verify_code_screen.dart';
 import '../../features/cart/cart_screen.dart';
+import '../../features/checkout/checkout_screen.dart';
+import '../../features/checkout/payment_screen.dart';
 import '../../features/favorites/favorites_screen.dart';
+import '../../features/notifications/notifications_screen.dart';
 import '../../features/onboarding/onboarding_screen.dart';
+import '../../features/orders/order_confirmation_screen.dart';
+import '../../features/orders/order_details_screen.dart';
+import '../../features/orders/orders_screen.dart';
+import '../../features/profile/change_password_screen.dart';
+import '../../features/profile/edit_profile_screen.dart';
 import '../../features/profile/language_screen.dart';
 import '../../features/profile/profile_screen.dart';
 import '../../features/shop/categories_screen.dart';
@@ -17,19 +26,9 @@ import '../../features/shop/home_screen.dart';
 import '../../features/shop/product_details_screen.dart';
 import '../../features/shop/search_screen.dart';
 import '../../features/splash/splash_screen.dart';
-import '../localization/l10n_extension.dart';
-import '../widgets/coming_soon_screen.dart';
+import '../../features/states/state_screens.dart';
 import '../widgets/main_shell.dart';
 import 'app_routes.dart';
-import '../../features/notifications/notifications_screen.dart';
-import '../../features/profile/edit_profile_screen.dart';
-import '../../features/profile/change_password_screen.dart';
-import '../../features/states/state_screens.dart';
-import '../../features/addresses/add_address_screen.dart';
-import '../../features/addresses/addresses_screen.dart';
-import '../../features/checkout/checkout_screen.dart';
-import '../../features/checkout/payment_screen.dart';
-import '../../features/orders/order_confirmation_screen.dart';
 
 /// جدول التنقل: كل عنوان مربوط بشاشة.
 final GoRouter appRouter = GoRouter(
@@ -68,16 +67,25 @@ final GoRouter appRouter = GoRouter(
     ),
 
     // ---------- شاشات ملء الشاشة (بلا الشريط السفلي) ----------
-        // معاينة مؤقتة لحالتي لا اتصال وخطأ
     GoRoute(
-      path: AppRoutes.offlinePreview,
-      builder: (context, state) => const OfflineScreen(),
+      path: AppRoutes.productDetailsPattern,
+      builder: (context, state) => ProductDetailsScreen(
+        productId: state.pathParameters['productId'] ?? '',
+      ),
     ),
     GoRoute(
-      path: AppRoutes.errorPreview,
-      builder: (context, state) => const ErrorScreen(),
+      path: AppRoutes.language,
+      builder: (context, state) => const LanguageScreen(),
     ),
-        GoRoute(
+    GoRoute(
+      path: AppRoutes.editProfile,
+      builder: (context, state) => const EditProfileScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.changePassword,
+      builder: (context, state) => const ChangePasswordScreen(),
+    ),
+    GoRoute(
       path: AppRoutes.addresses,
       builder: (context, state) => const AddressesScreen(),
     ),
@@ -85,7 +93,8 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.addAddress,
       builder: (context, state) => const AddAddressScreen(),
     ),
-        // ---------- مسار الطلب ----------
+
+    // ---------- مسار الطلب ----------
     GoRoute(
       path: AppRoutes.checkout,
       builder: (context, state) => const CheckoutScreen(),
@@ -101,23 +110,22 @@ final GoRouter appRouter = GoRouter(
       ),
     ),
     GoRoute(
-      path: AppRoutes.productDetailsPattern,
-      builder: (context, state) => ProductDetailsScreen(
-        productId: state.pathParameters['productId'] ?? '',
+      path: AppRoutes.orderDetailsPattern,
+      builder: (context, state) => OrderDetailsScreen(
+        orderId: state.pathParameters['orderId'] ?? '',
       ),
     ),
+
+    // معاينة مؤقتة لحالتي لا اتصال وخطأ
     GoRoute(
-      path: AppRoutes.language,
-      builder: (context, state) => const LanguageScreen(),
+      path: AppRoutes.offlinePreview,
+      builder: (context, state) => const OfflineScreen(),
     ),
-        GoRoute(
-      path: AppRoutes.editProfile,
-      builder: (context, state) => const EditProfileScreen(),
+    GoRoute(
+      path: AppRoutes.errorPreview,
+      builder: (context, state) => const ErrorScreen(),
     ),
-           GoRoute(
-      path: AppRoutes.changePassword,
-      builder: (context, state) => const ChangePasswordScreen(),
-    ),
+
     // ---------- التطبيق الرئيسي: 5 تبويبات ----------
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) =>
@@ -168,11 +176,7 @@ final GoRouter appRouter = GoRouter(
           routes: [
             GoRoute(
               path: AppRoutes.orders,
-              // مؤقت: نبنيوها في مسار الطلب
-              builder: (context, state) => ComingSoonScreen(
-                title: context.l10n.tabOrders,
-                icon: Icons.inventory_2_outlined,
-              ),
+              builder: (context, state) => const OrdersScreen(),
             ),
           ],
         ),
@@ -182,12 +186,12 @@ final GoRouter appRouter = GoRouter(
               path: AppRoutes.profile,
               builder: (context, state) => const ProfileScreen(),
               routes: [
-                // مسار فرعي: /profile/favorites
+                // مسارات فرعية: /profile/favorites و/profile/notifications
                 GoRoute(
                   path: 'favorites',
                   builder: (context, state) => const FavoritesScreen(),
                 ),
-                                GoRoute(
+                GoRoute(
                   path: 'notifications',
                   builder: (context, state) => const NotificationsScreen(),
                 ),
